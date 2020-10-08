@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3542457855738552248}
   - component: {fileID: 3542457855738552251}
   - component: {fileID: 3542457855738552254}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: LockedDoor
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 797555211876609534}
   - component: {fileID: 6303455447879600880}
   - component: {fileID: 3711995472426747505}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LockedDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
