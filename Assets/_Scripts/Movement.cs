@@ -63,6 +63,8 @@ public class Movement : MonoBehaviour
                     speedModifier = 1.4f;
 
             }
+            else
+                speedModifier = 1.4f;
 
         }
 
@@ -85,6 +87,8 @@ public class Movement : MonoBehaviour
                     speedModifier = 1.4f;
 
             }
+            else
+                speedModifier = 1.4f;
 
         }
 
@@ -118,6 +122,8 @@ public class Movement : MonoBehaviour
                     speedModifier = 1.4f;
 
             }
+            else
+                speedModifier = 1.4f;
 
         }
 
@@ -140,6 +146,8 @@ public class Movement : MonoBehaviour
                     speedModifier = 1.4f;
 
             }
+            else
+                speedModifier = 1.4f;
 
         }
 

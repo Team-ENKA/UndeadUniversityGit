@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 6
+  radius: 8
   height: 2
   repathRate: 0.5
   canSearch: 1
@@ -487,7 +487,7 @@ MonoBehaviour:
   - {x: -0.711037, y: 1.0724157, z: 0}
   m_ShapePathHash: -1373746713
   m_Mesh: {fileID: 0}
-  m_InstanceId: 37016
+  m_InstanceId: 41024
 --- !u!1 &7489742597444930800
 GameObject:
   m_ObjectHideFlags: 0
