@@ -3261,7 +3261,7 @@ TextMesh:
   m_GameObject: {fileID: 1858014042}
   m_Text: '         YOU WIN!
 
-    Teleport to any level :)'
+    Teleport to any level (:'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
