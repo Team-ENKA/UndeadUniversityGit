@@ -8,6 +8,8 @@ TagManager:
   - target
   - Boss
   - Door
+  - Floor
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -17,6 +19,8 @@ TagManager:
   - UI
   - 
   - 
+  - Floor
+  - Walls
   - Walls
   - Obstacles
   - 
