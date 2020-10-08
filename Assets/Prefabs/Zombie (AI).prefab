@@ -177,6 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1549038595719880428}
   - component: {fileID: 5580212017652486294}
+  - component: {fileID: 3024049701081052271}
   - component: {fileID: 6656645549332155010}
   - component: {fileID: 2590302607751081852}
   - component: {fileID: 3783978046527001013}
@@ -211,13 +212,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6949561496242566077}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &3024049701081052271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6949561496242566077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f82ca4b4b36f9948b4845118ec3fa51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetDestination1: {fileID: 6656645549332155010}
+  targetDestination2: {fileID: 5580212017652486294}
 --- !u!114 &6656645549332155010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,7 +487,7 @@ MonoBehaviour:
   - {x: -0.711037, y: 1.0724157, z: 0}
   m_ShapePathHash: -1373746713
   m_Mesh: {fileID: 0}
-  m_InstanceId: 64028
+  m_InstanceId: 32352
 --- !u!1 &7489742597444930800
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,10 +655,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e99fe33bb20b844988d641115915cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyFullHealth: []
-  Zombie: {fileID: 0}
+  EnemyFullHealth:
+  - {fileID: 21300000, guid: b0ba9189a5ba1394b863711c8daf23f5, type: 3}
+  - {fileID: 21300000, guid: a99113d00aa97f841b0a8ff9b6e649a5, type: 3}
+  - {fileID: 21300000, guid: d506aa994e656174494d925afea0d332, type: 3}
+  - {fileID: 21300000, guid: 9d65da2a89ddee84fadd5b71136b5215, type: 3}
+  - {fileID: 21300000, guid: cffc25831ded14a4cada33e189ccbc4e, type: 3}
+  Zombie: {fileID: 6949561496242566077}
   CuredZ: {fileID: 0}
   CuredH: {fileID: 0}
-  targetSwitch: {fileID: 0}
-  SpriteRenderer: {fileID: 0}
-  zombieSprite: {fileID: 0}
+  targetSwitch: {fileID: 3024049701081052271}
+  SpriteRenderer: {fileID: 8705067495180360717}
+  zombieSprite: {fileID: 7342537277073457753}
