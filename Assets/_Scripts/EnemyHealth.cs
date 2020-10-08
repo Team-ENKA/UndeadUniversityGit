@@ -10,7 +10,6 @@ public class EnemyHealth : MonoBehaviour
     public GameObject Zombie;
     public CuredZombie CuredZ;
     public CuredHuman CuredH;
-    public Follower FollowScript;
     public SpriteRenderer SpriteRenderer;
     public GameObject zombieSprite;
 
@@ -41,7 +40,6 @@ public class EnemyHealth : MonoBehaviour
             SpriteRenderer.enabled = false;
             Zombie.GetComponentInChildren<CuredZombie>().CuredZ();
             Zombie.GetComponentInChildren<CuredHuman>().CuredH();
-            Zombie.GetComponent<Follower>().enabled = false;
 
         }
 
