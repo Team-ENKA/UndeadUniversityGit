@@ -58,7 +58,7 @@ MonoBehaviour:
   - {x: -5.153097, y: 0.776277, z: 0}
   m_ShapePathHash: -1146193880
   m_Mesh: {fileID: 0}
-  m_InstanceId: 35232
+  m_InstanceId: 114438
 --- !u!212 &6499723423616987160
 SpriteRenderer:
   m_ObjectHideFlags: 0
