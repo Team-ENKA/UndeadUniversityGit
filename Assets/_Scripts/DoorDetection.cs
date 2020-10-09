@@ -19,7 +19,6 @@ public class DoorDetection : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
 
-        Debug.Log("ye1");
 
         if (collision.gameObject.tag == "Door")
         {
