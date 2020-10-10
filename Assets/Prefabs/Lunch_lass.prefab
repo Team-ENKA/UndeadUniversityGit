@@ -186,6 +186,23 @@ Transform:
   m_Father: {fileID: 8770188469212020259}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &470483751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722596658775651673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1b9505dc7b4874881e4f978f943716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  currentHealth: 0
+  healthBar: {fileID: 6281335210954722511}
+  LunchLass: {fileID: 0}
+  playerInvincibility: 1
 --- !u!1 &3468588972011721961
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +215,7 @@ GameObject:
   - component: {fileID: 1926129435752891771}
   - component: {fileID: 8676258904793326981}
   - component: {fileID: 2428006522062684550}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PChealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,14 +314,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3468588972011721961}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d1b9505dc7b4874881e4f978f943716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
+  maxHealth: 30
   currentHealth: 0
   healthBar: {fileID: 0}
+  LunchLass: {fileID: 0}
+  playerInvincibility: 0
 --- !u!1 &5089305679443921114
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +455,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 000000000f0fac06cf04424ef9fe0d04
+  m_ApplyToSortingLayers: f9fe0d0400000000cf04424e0f0fac06
   m_LightCookieSprite: {fileID: 21300000, guid: b0ba9189a5ba1394b863711c8daf23f5, type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -596,6 +615,8 @@ MonoBehaviour:
   maxHealth: 30
   currentHealth: 0
   healthBar: {fileID: 6281335210954722511}
+  LunchLass: {fileID: 5441200228143034858}
+  playerInvincibility: 1
 --- !u!1 &5441200228143034858
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +743,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5441200228143034858}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f60da64fd6a19c54b843e2f828503b4a, type: 3}
   m_Name: 
@@ -1234,7 +1255,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1722596657695767166, guid: e7b3f047bcebd4c4dbfbcde9cebe8334, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: Health
       objectReference: {fileID: 0}
     - target: {fileID: 4185343751019098533, guid: e7b3f047bcebd4c4dbfbcde9cebe8334, type: 3}
       propertyPath: m_RenderMode
@@ -1382,6 +1403,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7b3f047bcebd4c4dbfbcde9cebe8334, type: 3}
+--- !u!1 &1722596658775651673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1722596657695767166, guid: e7b3f047bcebd4c4dbfbcde9cebe8334, type: 3}
+  m_PrefabInstance: {fileID: 1084477223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6498812088389189785 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6498812089468981182, guid: e7b3f047bcebd4c4dbfbcde9cebe8334, type: 3}
