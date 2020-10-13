@@ -12,6 +12,9 @@ public class BoHealthController : MonoBehaviour
     public GameObject LunchLass;
     public float playerInvincibility;
 
+    public float deathEffectParticles;
+    public GameObject deathParticle;
+
     void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy" && playerInvincibility <= 0)
@@ -50,6 +53,8 @@ public class BoHealthController : MonoBehaviour
         
         if (currentHealth == 0)
         {
+            for (int i = 0; i < deathEffectParticles; i++)
+                Instantiate(deathParticle, transform.position, Quaternion.identity);
             Destroy(LunchLass);
         }
     }
