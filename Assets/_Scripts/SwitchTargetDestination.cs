@@ -8,12 +8,13 @@ public class SwitchTargetDestination : MonoBehaviour
 
     public AIDestinationSetter targetDestination1;
     public AIDestinationSetter targetDestination2;
+    public Patrol patrolPoints;
 
     public void SwitchTarget()
     {
 
         targetDestination1.enabled = false;
-        targetDestination2.enabled = true;
+        patrolPoints.enabled = true;
 
     }
 
