@@ -317,6 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetDestination1: {fileID: 6656645549332155010}
   targetDestination2: {fileID: 5580212017652486294}
+  patrolPoints: {fileID: 0}
 --- !u!114 &6656645549332155010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,8 +429,11 @@ GameObject:
   - component: {fileID: 3377109356695002949}
   - component: {fileID: 1490932571094454376}
   - component: {fileID: 5964392636811597494}
-  - component: {fileID: 1090041855950741130}
   - component: {fileID: 5565426397140458997}
+  - component: {fileID: 1371569036929808695}
+  - component: {fileID: 778654808802943405}
+  - component: {fileID: 8384277442001357307}
+  - component: {fileID: 2100084743271690485}
   m_Layer: 0
   m_Name: Zombie sprite
   m_TagString: Enemy
@@ -532,19 +536,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.1, y: -0.4}
   m_Size: {x: 2, y: 3.7}
   m_Direction: 0
---- !u!114 &1090041855950741130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7342537277073457753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4f6eb58fb4f86f4083e148e1335cd44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eh: {fileID: 4134133797063208384}
 --- !u!114 &5565426397140458997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +583,134 @@ MonoBehaviour:
   - {x: -0.711037, y: 1.0724157, z: 0}
   m_ShapePathHash: -1373746713
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1928
+  m_InstanceId: 24560
+--- !u!114 &1371569036929808695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342537277073457753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3280b90b22aaa624d95695076358efe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  currentHealth: 0
+  ZombieDamageBar: {fileID: 0}
+  Zombie: {fileID: 0}
+  playerInvincibility: 0
+  deathEffectParticles: 0
+  deathParticle: {fileID: 0}
+--- !u!114 &778654808802943405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342537277073457753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7eeee0d107c7446a0b6fde4e4d7c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  currentHealth: 0
+  ZombieDamageBar: {fileID: 0}
+  Zombie: {fileID: 0}
+  Infectionbar: {fileID: 0}
+  playerInvincibility: 0
+  deathEffectParticles: 0
+  deathParticle: {fileID: 0}
+  CuredZ: {fileID: 0}
+  Zombie_sprite: {fileID: 0}
+--- !u!114 &8384277442001357307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342537277073457753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd7b5407a0d37b429818f82693505c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombieDamageSlider: {fileID: 0}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  DamageFill: {fileID: 0}
+--- !u!114 &2100084743271690485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342537277073457753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb254d98ad95e614987a53315ba9ddcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombieInfectionSlider: {fileID: 0}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  DamageFill: {fileID: 0}
 --- !u!1 &7489742597444930800
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7061101206301947133
 Transform:
   m_ObjectHideFlags: 0
