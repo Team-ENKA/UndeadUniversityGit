@@ -904,6 +904,8 @@ GameObject:
   - component: {fileID: 2590302607751081852}
   - component: {fileID: 3783978046527001013}
   - component: {fileID: 1214342884}
+  - component: {fileID: 2276716932707397526}
+  - component: {fileID: 260993017898996843}
   m_Layer: 0
   m_Name: Zombie (AI)
   m_TagString: Enemy
@@ -1058,6 +1060,47 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &2276716932707397526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6949561496242566077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3280b90b22aaa624d95695076358efe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  currentHealth: 0
+  ZombieDamageBar: {fileID: 0}
+  Zombie: {fileID: 0}
+  playerInvincibility: 0
+  deathEffectParticles: 0
+  deathParticle: {fileID: 0}
+--- !u!114 &260993017898996843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6949561496242566077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7eeee0d107c7446a0b6fde4e4d7c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  currentHealth: 0
+  ZombieDamageBar: {fileID: 0}
+  Zombie: {fileID: 0}
+  Infectionbar: {fileID: 0}
+  playerInvincibility: 0
+  deathEffectParticles: 0
+  deathParticle: {fileID: 0}
+  CuredZ: {fileID: 0}
+  Zombie_sprite: {fileID: 0}
 --- !u!1 &7342537277073457753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,7 +1263,7 @@ MonoBehaviour:
   - {x: -0.711037, y: 1.0724157, z: 0}
   m_ShapePathHash: -1373746713
   m_Mesh: {fileID: 0}
-  m_InstanceId: 25088
+  m_InstanceId: 26248
 --- !u!1 &7489742597444930800
 GameObject:
   m_ObjectHideFlags: 0
