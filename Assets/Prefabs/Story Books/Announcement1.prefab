@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 33, y: 1.4}
-  m_SizeDelta: {x: 50, y: 5}
+  m_SizeDelta: {x: 60, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &4539807975340299244
 MeshRenderer:
@@ -98,19 +98,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "To all at Levanger Campus: There has been an outbreak of a highly transmittable
-    disease among both staff and students. \nSymptoms of this disease include physical
-    changes, such as abnormal complexions and fungal mutations surrounding the head.
-    Other symptoms include a lowered sense of smell and sight, extreme aggressive
-    tendencies, and cannibalistic behaviour. If you have any of these symptoms or
-    have been in contact with persons showing any of these symptoms, cease all physical
-    contact with others and get down to Hovedbygget, you will get a health inspection
-    there. \nIt is also important to note that when infected, the aforementioned
-    symptoms may not appear right away. Due to frequent commuting between the facilities,
-    we can\u2019t estimate how many are infected and how far the disease has spread,
-    so we advise all staff and students at Levanger campus to continue social distancing
-    but on an increased level (keep an at least 2 meter distance). \nMore information
-    on the situation will be given shortly"
+  m_text: "Speaker announcement:\n\nTo all at Levanger Campus: There has been an
+    outbreak of a highly transmittable disease among both staff and students. \nSymptoms
+    of this disease include physical changes, such as abnormal complexions and fungal
+    mutations surrounding the head. Other symptoms include a lowered sense of smell
+    and sight, extreme aggressive tendencies, and cannibalistic behaviour. If you
+    have any of these symptoms or have been in contact with persons showing any of
+    these symptoms, cease all physical contact with others and get down to Hovedbygget,
+    you will get a health inspection there. \nIt is also important to note that when
+    infected, the aforementioned symptoms may not appear right away. Due to frequent
+    commuting between the facilities, we can\u2019t estimate how many are infected
+    and how far the disease has spread, so we advise all staff and students at Levanger
+    campus to continue social distancing but on an increased level (keep an at least
+    2 meter distance). \nMore information on the situation will be given shortly"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 1022986361421736275}
   - component: {fileID: 318646905403349425}
   m_Layer: 0
-  m_Name: Story Book
+  m_Name: Announcement1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,8 +252,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1312949455
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: aac3451f4cc397346b6a7933d10dc9d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
