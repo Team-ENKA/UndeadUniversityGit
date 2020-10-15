@@ -23,7 +23,8 @@ public class ZombieInfectionController : MonoBehaviour
 
     public void GotShot()
     {
-        TakeDamage(2);
+        //TakeDamage(2);
+        currentHealth += 2;
     }
 
 
