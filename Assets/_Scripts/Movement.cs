@@ -215,4 +215,21 @@ public class Movement : MonoBehaviour
 
     }
 
+    public void MovementChange ()
+    {
+
+        Debug.Log("poff");
+
+        if (movementType > 0)
+        {
+
+            movementType = 0;
+
+        } else
+            movementType = 1;
+
+        
+
+    }
+
 }
