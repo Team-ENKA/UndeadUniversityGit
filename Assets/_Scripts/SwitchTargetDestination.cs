@@ -6,15 +6,15 @@ using UnityEngine;
 public class SwitchTargetDestination : MonoBehaviour
 {
 
-    public AIDestinationSetter targetDestination1;
-    public AIDestinationSetter targetDestination2;
+    public AIDestinationSetter infectedDestination;
+    public AIDestinationSetter curedDestination;
     public Patrol patrolPoints;
 
     public void SwitchTarget()
     {
 
-        targetDestination1.enabled = false;
-        targetDestination2.enabled = true;
+        infectedDestination.enabled = false;
+        curedDestination.enabled = true;
 
     }
 
