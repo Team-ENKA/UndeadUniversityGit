@@ -6,6 +6,7 @@ public class CuredZombie : MonoBehaviour
 {
 
     private SpriteRenderer Sprite;
+    public ZombieDamageController zombieDamageController;
 
     // Start is called before the first frame update
     void Start()

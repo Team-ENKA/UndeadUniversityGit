@@ -22,10 +22,10 @@ public class Shooting : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown("mouse 0"))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
             ammoCounterScript.AmmoCheck();
 
-        if (Input.GetKeyDown("g"))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
             Instantiate(antiBacGrenade, capsuleTransform.position, lunchLassSprite.rotation);
 
     }
@@ -54,36 +54,24 @@ public class Shooting : MonoBehaviour
 
             if (hit.collider.tag == "Enemy")
             {
-
                 if (Input.GetKeyDown("Mouse0"))
                 {
                     zombieInfection = hit.collider.gameObject.GetComponentInChildren<ZombieInfectionController>();
-
                     zombieInfection.GotShot();
                 }
            
                 if (Input.GetKeyDown("Mouse1"))
                 {
                     zombieDamage = hit.collider.gameObject.GetComponentInChildren<ZombieDamageController>();
-
                     zombieDamage.GotShot();
-                }               
-
-
+                }    
             }
-
    
             if (hit.collider.tag == "Boss")
             {
-
                 bossHealth = hit.collider.gameObject.GetComponentInChildren<BossHealthController>();
                 bossHealth.GotShot();
-
             }
-
         }
-
-    
-
     }
 }

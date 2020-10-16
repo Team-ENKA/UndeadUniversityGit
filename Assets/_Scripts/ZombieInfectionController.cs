@@ -9,8 +9,9 @@ public class ZombieInfectionController : MonoBehaviour
     public int maxHealth = 30;
     public int currentHealth;
     public ZombieDamageBar ZombieDamageBar;
+    public GameObject Damagebar;
 
-    public GameObject Zombie;
+    public GameObject Zombie_AI;
     public GameObject Infectionbar;
     public float playerInvincibility;
 
@@ -19,7 +20,7 @@ public class ZombieInfectionController : MonoBehaviour
 
     public CuredZombie CuredZ;
     public Sprite Zombie_sprite;
-    private SpriteRenderer sprite;
+    private SpriteRenderer Sprite;
 
     public void GotShot()
     {
@@ -34,7 +35,7 @@ public class ZombieInfectionController : MonoBehaviour
         currentHealth = maxHealth;
         ZombieDamageBar.SetMaxHealth(maxHealth);
 
-        sprite = gameObject.GetComponent<SpriteRenderer>();
+        Sprite = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -48,33 +49,29 @@ public class ZombieInfectionController : MonoBehaviour
         currentHealth -= damage;
         ZombieDamageBar.SetHealth(currentHealth);
 
-        /*if (currentHealth == 0)
-        {
-            for (int i = 0; i < deathEffectParticles; i++)
-                Instantiate(deathParticle, transform.position, Quaternion.identity);
-            Destroy(Zombie);
-        }*/
-
         if (currentHealth == 0)
         {
             Destroy(Infectionbar);
+            ZeroInfection();
+
+            /*if (currentHealth == 0)
+            {
+                for (int i = 0; i < deathEffectParticles; i++)
+                    Instantiate(deathParticle, transform.position, Quaternion.identity);
+                Destroy(Zombie);
+            }*/
         }
 
-        /*if (currentHealth == maxHealth)
-        {
-            Destroy(Zombie_sprite);
-        }*/
-
-        /*void CuredZ()
-        {
-            sprite.enabled = false;
-        }*/
-
+    void ZeroInfection()
+    {
         if (currentHealth == maxHealth)
         {
             Destroy(Zombie_sprite);
-            Zombie.GetComponentInChildren<CuredZombie>().CuredZ();
-            Zombie.GetComponentInChildren<CuredHuman>().CuredH();
+            Zombie_AI.GetComponentInChildren<CuredZombie>().CuredZ();
+            Zombie_AI.GetComponentInChildren<CuredHuman>().CuredH();
         }
     }
+        
+
+}
 }

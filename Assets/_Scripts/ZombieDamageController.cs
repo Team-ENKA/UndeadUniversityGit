@@ -9,11 +9,12 @@ public class ZombieDamageController : MonoBehaviour
     public int currentHealth;
     public ZombieDamageBar ZombieDamageBar;
 
-    public GameObject Zombie;
+    public GameObject Zombie_AI;
     public float playerInvincibility;
 
     public float deathEffectParticles;
     public GameObject deathParticle;
+    public GameObject cured_sprite;
 
     public void GotShot()
     {
@@ -21,8 +22,7 @@ public class ZombieDamageController : MonoBehaviour
         Debug.Log("Anything");
     }
 
-    /*
-     * void OnCollisionStay2D(Collision2D collision)
+     void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" && playerInvincibility <= 0)
         {
@@ -31,7 +31,6 @@ public class ZombieDamageController : MonoBehaviour
             TakeDamage(2);
         }
     }
-    */
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +54,9 @@ public class ZombieDamageController : MonoBehaviour
         {
             for (int i = 0; i < deathEffectParticles; i++)
                 Instantiate(deathParticle, transform.position, Quaternion.identity);
-            Destroy(Zombie);
+            //Destroy(Zombie);
+            Destroy(Zombie_AI);
+            Instantiate(cured_sprite);
         }
     }
 }
