@@ -9,7 +9,7 @@ public class ZombieInfectionController : MonoBehaviour
     public int maxHealth = 30;
     public int currentHealth;
     public ZombieDamageBar ZombieDamageBar;
-    public GameObject Damagebar;
+    //public GameObject Damagebar;
 
     public GameObject Zombie_AI;
     public GameObject Infectionbar;
@@ -68,10 +68,8 @@ public class ZombieInfectionController : MonoBehaviour
         {
             Destroy(Zombie_sprite);
             Zombie_AI.GetComponentInChildren<CuredZombie>().CuredZ();
-                Zombie_AI.GetComponentInChildren<CuredHuman>().CuredH();
+            Zombie_AI.GetComponentInChildren<CuredHuman>().CuredH();
         }
-    }
-        
-
+    }   
 }
 }
