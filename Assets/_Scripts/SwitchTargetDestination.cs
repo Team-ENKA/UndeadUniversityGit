@@ -14,7 +14,7 @@ public class SwitchTargetDestination : MonoBehaviour
     {
 
         targetDestination1.enabled = false;
-        patrolPoints.enabled = true;
+        targetDestination2.enabled = true;
 
     }
 
