@@ -57,7 +57,7 @@ public class ZombieDamageController : MonoBehaviour
             //Destroy(Zombie);
             Destroy(Zombie_AI);
             //Instantiate(cured_sprite);
-            //InstantiateGetComponent<Student_Cured_Image_midground>();
+            //GetComponent<Student_Cured_Image_midground>().Cured;
         }
     }
 }
