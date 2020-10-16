@@ -8,7 +8,7 @@ public class StartGame : MonoBehaviour
     {
 
         Debug.Log("start");
-        SceneManager.LoadScene("Floor 3", LoadSceneMode.Single);
+        SceneManager.LoadScene("Level 1 (floor 3)", LoadSceneMode.Single);
 
     }
 
