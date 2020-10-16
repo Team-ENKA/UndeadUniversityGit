@@ -60,8 +60,7 @@ MonoBehaviour:
   capsuleTransform: {fileID: 0}
   shootingDirection: {fileID: 8791924195390361067}
   shotOrigin: {x: 0, y: 0}
-  zombieInfection: {fileID: 4129789441301913768, guid: 9dc0dc01cce1bb14f86006e6e647ef91, type: 3}
-  zombieDamage: {fileID: 6878224319499070517, guid: 9dc0dc01cce1bb14f86006e6e647ef91, type: 3}
+  enemyHealth: {fileID: 0}
   bossHealth: {fileID: 0}
   ammoCounterScript: {fileID: 0}
   hitPointParticle: {fileID: 2099646572536834986, guid: 4f80a72639915c34ebb27bacb625636d, type: 3}
