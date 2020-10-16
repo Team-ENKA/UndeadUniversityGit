@@ -68,7 +68,7 @@ public class ZombieInfectionController : MonoBehaviour
         {
             Destroy(Zombie_sprite);
             Zombie_AI.GetComponentInChildren<CuredZombie>().CuredZ();
-            Zombie_AI.GetComponentInChildren<CuredHuman>().CuredH();
+                Zombie_AI.GetComponentInChildren<CuredHuman>().CuredH();
         }
     }
         

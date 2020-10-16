@@ -56,7 +56,8 @@ public class ZombieDamageController : MonoBehaviour
                 Instantiate(deathParticle, transform.position, Quaternion.identity);
             //Destroy(Zombie);
             Destroy(Zombie_AI);
-            Instantiate(cured_sprite);
+            //Instantiate(cured_sprite);
+            //InstantiateGetComponent<Student_Cured_Image_midground>();
         }
     }
 }
