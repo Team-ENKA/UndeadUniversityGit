@@ -7,18 +7,18 @@ public class ZombieInfectionBar : MonoBehaviour
 {
     public Slider zombieInfectionSlider;
     public Gradient gradient;
-    public Image DamageFill;
+    public Image InfectionFill;
     public void SetMaxHealth(int health)
     {
         zombieInfectionSlider.maxValue = health;
         zombieInfectionSlider.value = health;
 
-        DamageFill.color = gradient.Evaluate(1f);
+        InfectionFill.color = gradient.Evaluate(1f);
     }
     public void SetHealth(int health)
     {
         zombieInfectionSlider.value = health;
 
-        DamageFill.color = gradient.Evaluate(zombieInfectionSlider.normalizedValue);
+        InfectionFill.color = gradient.Evaluate(zombieInfectionSlider.normalizedValue);
     }
 }

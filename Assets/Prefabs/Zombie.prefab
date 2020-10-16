@@ -339,7 +339,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  DamageFill: {fileID: 1786658453597751719}
+  InfectionFill: {fileID: 0}
 --- !u!1 &2943580721815622454
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a6e24809132b749bc6d75e76373865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zombieDamageController: {fileID: 0}
 --- !u!70 &2304042365642950617
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -502,7 +503,7 @@ MonoBehaviour:
   - {x: -0.711037, y: 1.0724157, z: 0}
   m_ShapePathHash: -1373746713
   m_Mesh: {fileID: 0}
-  m_InstanceId: 26616
+  m_InstanceId: 21312
 --- !u!1 &3084038751728704927
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,6 +672,7 @@ MonoBehaviour:
   playerInvincibility: 0
   deathEffectParticles: 100
   deathParticle: {fileID: 8510087422334560741, guid: f044ef37a6ec40d4b9b646036a7087e6, type: 3}
+  cured_sprite: {fileID: 0}
 --- !u!114 &4129789441301913768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,7 +688,8 @@ MonoBehaviour:
   maxHealth: 30
   currentHealth: 0
   ZombieDamageBar: {fileID: 0}
-  Zombie: {fileID: 0}
+  Damagebar: {fileID: 0}
+  Zombie_AI: {fileID: 0}
   Infectionbar: {fileID: 0}
   playerInvincibility: 0
   deathEffectParticles: 0
@@ -915,7 +918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.30004883, y: 9.300001}
+  m_AnchoredPosition: {x: -0.49, y: 8.75}
   m_SizeDelta: {x: 257.51074, y: 101.59131}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &467284539112008599
@@ -997,6 +1000,7 @@ MonoBehaviour:
   playerInvincibility: 0
   deathEffectParticles: 0
   deathParticle: {fileID: 0}
+  cured_sprite: {fileID: 0}
 --- !u!114 &7783596412845362924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,7 +1016,8 @@ MonoBehaviour:
   maxHealth: 30
   currentHealth: 0
   ZombieDamageBar: {fileID: 0}
-  Zombie: {fileID: 0}
+  Damagebar: {fileID: 0}
+  Zombie_AI: {fileID: 0}
   Infectionbar: {fileID: 0}
   playerInvincibility: 0
   deathEffectParticles: 0
