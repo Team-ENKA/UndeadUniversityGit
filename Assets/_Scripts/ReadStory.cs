@@ -9,13 +9,11 @@ public class ReadStory : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
+            if (Input.GetKey("e") && collision.gameObject.tag == "Player")
+            {
+                textToShow.enabled = true;
 
-        if (Input.GetKey("e") && collision.gameObject.tag == "Player")
-        {
-            textToShow.enabled = true;
-
-        }
-
+            }
     }
 
 }

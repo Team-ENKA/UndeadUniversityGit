@@ -10,6 +10,7 @@ TagManager:
   - Door
   - Floor
   - Walls
+  - Coffee
   layers:
   - Default
   - TransparentFX

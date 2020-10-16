@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     //the speed value is changed depending on movement direction as to not double movement speed when going diagonally
     private float Speed = 18f;
     private float speedModifier = 1.4f;
+    private float coffeeBoostTimer = 1f;
+    private float coffeeSpeedModifier = 1f;
     public float stamina;
     public float staminaRegenCooldown;
     public TextMesh staminaText;
@@ -195,6 +197,12 @@ public class Movement : MonoBehaviour
 
         }
 
+        coffeeBoostTimer = coffeeBoostTimer - Time.deltaTime;
+        if (coffeeBoostTimer < 1)
+        {
+            coffeeSpeedModifier = 1;
+        }
+
         Vector2 mousePos = Input.mousePosition;
         Vector2 OP = Camera.main.WorldToScreenPoint(playerTransform.position);
         mousePos.x = mousePos.x - OP.x;
@@ -211,7 +219,13 @@ public class Movement : MonoBehaviour
         Vector2 move = new Vector2(Sideways, UpDown);
 
         //uses the Vector3 just created to move the character using the speed variable and deltaTime as to smooth out the movement independent of framerate
-        transform.Translate(move * Time.deltaTime * Speed * speedModifier);
+        transform.Translate(move * Time.deltaTime * Speed * speedModifier * coffeeSpeedModifier);
+
+    }
+    public void CoffeeBoost()
+    {
+        coffeeSpeedModifier = 3;
+        coffeeBoostTimer = 5;
 
     }
 
