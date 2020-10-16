@@ -49,7 +49,7 @@ public class Shooting : MonoBehaviour
 
             if (hit.collider.tag == "Enemy")
             {
-                if (Input.GetKeyDown("Mouse0"))
+                if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     zombieInfection = hit.collider.gameObject.GetComponentInChildren<ZombieInfectionController>();
                     zombieInfection.GotShot();

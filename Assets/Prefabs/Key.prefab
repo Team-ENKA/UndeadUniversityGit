@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57fb3d5fad5fbec43be39266c2acd8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemWithText: {fileID: 6338842860989657873}
+  itemWithText: {fileID: 9144466525839337158}
   textVisible: 0
 --- !u!23 &480067330337409145
 MeshRenderer:
@@ -310,7 +310,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 50, y: 50}
   m_EdgeRadius: 0
 --- !u!114 &8458258605185093705
 MonoBehaviour:
