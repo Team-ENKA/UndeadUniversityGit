@@ -9,9 +9,9 @@ public class Shooting : MonoBehaviour
     public Transform capsuleTransform;
     public Transform shootingDirection;
     public Vector2 shotOrigin;
-    //public EnemyHealthController enemyHealth;
-    public ZombieInfectionController zombieInfection;
-    public ZombieDamageController zombieDamage;
+    public EnemyHealthController enemyHealth;
+    //public ZombieInfectionController zombieInfection;
+    //public ZombieDamageController zombieDamage;
     public BossHealthController bossHealth;
     public AmmoCounter ammoCounterScript;
     public GameObject hitPointParticle;
@@ -49,7 +49,11 @@ public class Shooting : MonoBehaviour
 
             if (hit.collider.tag == "Enemy")
             {
-                if (Input.GetKeyDown(KeyCode.Mouse0))
+
+                enemyHealth = hit.collider.gameObject.GetComponentInChildren<EnemyHealthController>();
+                enemyHealth.GotShot();
+
+                /*if (Input.GetKeyDown("Mouse0"))
                 {
                     zombieInfection = hit.collider.gameObject.GetComponentInChildren<ZombieInfectionController>();
                     zombieInfection.GotShot();
@@ -59,7 +63,7 @@ public class Shooting : MonoBehaviour
                 {
                     zombieDamage = hit.collider.gameObject.GetComponentInChildren<ZombieDamageController>();
                     zombieDamage.GotShot();
-                }    
+                }  */  
             }
    
             if (hit.collider.tag == "Boss")
