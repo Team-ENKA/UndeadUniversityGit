@@ -19,13 +19,16 @@ public class ZombieInfectionController : MonoBehaviour
     public GameObject deathParticle;
 
     public CuredZombie CuredZ;
-    public Sprite Zombie_sprite;
+    public GameObject Zombie_sprite;
     private SpriteRenderer Sprite;
+
+    public SwitchTargetDestination switchTargetDestination;
 
     public void GotShot()
     {
-        //TakeDamage(2);
-        currentHealth += 2;
+        TakeDamage(4);
+        //currentHealth += 2;
+        Debug.Log("Anything.");
     }
 
 
@@ -41,7 +44,11 @@ public class ZombieInfectionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerInvincibility = playerInvincibility - Time.deltaTime;
+        if (playerInvincibility > 0)
+        {
+            playerInvincibility = playerInvincibility - Time.deltaTime;
+
+        }
     }
 
     void TakeDamage(int damage)
@@ -49,27 +56,28 @@ public class ZombieInfectionController : MonoBehaviour
         currentHealth -= damage;
         ZombieDamageBar.SetHealth(currentHealth);
 
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             Destroy(Infectionbar);
             ZeroInfection();
 
-            /*if (currentHealth == 0)
-            {
-                for (int i = 0; i < deathEffectParticles; i++)
-                    Instantiate(deathParticle, transform.position, Quaternion.identity);
-                Destroy(Zombie);
-            }*/
-        }
+            for (int i = 0; i < deathEffectParticles; i++)
+                Instantiate(deathParticle, transform.position, Quaternion.identity);
 
+            //       Destroy(Zombie_sprite);
+
+        }
+    }
     void ZeroInfection()
     {
-        if (currentHealth == maxHealth)
-        {
+        
+       Zombie_AI.GetComponentInChildren<CuredHuman>().CuredH();
+        switchTargetDestination.SwitchTarget();
+       
+
             Destroy(Zombie_sprite);
-            Zombie_AI.GetComponentInChildren<CuredZombie>().CuredZ();
-            Zombie_AI.GetComponentInChildren<CuredHuman>().CuredH();
-        }
+        Debug.Log("Zombie is dead");
+
+        
     }   
-}
 }

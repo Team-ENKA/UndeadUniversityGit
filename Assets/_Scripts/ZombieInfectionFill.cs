@@ -17,7 +17,10 @@ public class ZombieInfectionFill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Fill -= Time.deltaTime * 0.2f;
+        if (Fill > 0)
+        {
+            Fill -= Time.deltaTime * 0.2f;
+        }
         InfectionFill.fillAmount = Fill;
     }
 }
