@@ -17,15 +17,28 @@ public class Shooting : MonoBehaviour
     public GameObject hitPointParticle;
     public GameObject antiBacGrenade;
     public Transform lunchLassSprite;
+    public float shootingCooldown;
+    public float grenadeCooldown;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+
+        shootingCooldown = shootingCooldown - Time.deltaTime;
+        grenadeCooldown = grenadeCooldown - Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && shootingCooldown <= 0f)
+        {
+
             ammoCounterScript.AmmoCheck();
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        }
+
+        if (Input.GetKey(KeyCode.Mouse1) && grenadeCooldown <= 0f)
+        {
+            grenadeCooldown = 2f;
             Instantiate(antiBacGrenade, capsuleTransform.position, lunchLassSprite.rotation);
+        }
     }
 
     public void Shoot()
