@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1940276538043604594}
   - component: {fileID: 8587599885607637633}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 4429612763590132318}
   - component: {fileID: 5743787483045795874}
   - component: {fileID: 8123925200849678701}
+  - component: {fileID: 129751254}
   m_Layer: 2
   m_Name: AmmoPickup
   m_TagString: Untagged
@@ -186,6 +187,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &129751254
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4429612763590132319}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 35.079998, y: 24.802656}
+    newSize: {x: 35.079998, y: 24.802656}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 35.079998, y: 24.802656}
+  m_EdgeRadius: 0
 --- !u!1 &5070222005010224037
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +227,7 @@ GameObject:
   - component: {fileID: 5824285224726569762}
   - component: {fileID: 5751587419772099848}
   - component: {fileID: 4424093209244994508}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

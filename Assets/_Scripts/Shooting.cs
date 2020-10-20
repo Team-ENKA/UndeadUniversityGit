@@ -10,22 +10,35 @@ public class Shooting : MonoBehaviour
     public Transform shootingDirection;
     public Vector2 shotOrigin;
     public EnemyHealthController enemyHealth;
-    //public ZombieInfectionController zombieInfection;
-    //public ZombieDamageController zombieDamage;
+    public ZombieInfectionController zombieInfection;
+    public ZombieDamageController zombieDamage;
     public BossHealthController bossHealth;
     public AmmoCounter ammoCounterScript;
     public GameObject hitPointParticle;
     public GameObject antiBacGrenade;
     public Transform lunchLassSprite;
+    public float shootingCooldown;
+    public float grenadeCooldown;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+
+        shootingCooldown = shootingCooldown - Time.deltaTime;
+        grenadeCooldown = grenadeCooldown - Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && shootingCooldown <= 0f)
+        {
+
             ammoCounterScript.AmmoCheck();
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        }
+
+        if (Input.GetKey(KeyCode.Mouse1) && grenadeCooldown <= 0f)
+        {
+            grenadeCooldown = 2f;
             Instantiate(antiBacGrenade, capsuleTransform.position, lunchLassSprite.rotation);
+        }
     }
 
     public void Shoot()
@@ -50,20 +63,20 @@ public class Shooting : MonoBehaviour
             if (hit.collider.tag == "Enemy")
             {
 
-                enemyHealth = hit.collider.gameObject.GetComponentInChildren<EnemyHealthController>();
-                enemyHealth.GotShot();
+                /*enemyHealth = hit.collider.gameObject.GetComponentInChildren<EnemyHealthController>();
+                enemyHealth.GotShot();*/
 
-                /*if (Input.GetKeyDown("Mouse0"))
+                if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     zombieInfection = hit.collider.gameObject.GetComponentInChildren<ZombieInfectionController>();
                     zombieInfection.GotShot();
                 }
            
-                if (Input.GetKeyDown("Mouse1"))
+                if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
                     zombieDamage = hit.collider.gameObject.GetComponentInChildren<ZombieDamageController>();
                     zombieDamage.GotShot();
-                }  */  
+                }   
             }
    
             if (hit.collider.tag == "Boss")

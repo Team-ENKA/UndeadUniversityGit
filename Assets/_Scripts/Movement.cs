@@ -16,23 +16,13 @@ public class Movement : MonoBehaviour
     public int movementType;
 
     //the speed value is changed depending on movement direction as to not double movement speed when going diagonally
-    private float Speed = 18f;
-    private float speedModifier = 1.4f;
+    public float Speed = 18f;
     private float coffeeBoostTimer = 1f;
     private float coffeeSpeedModifier = 1f;
-    public float stamina;
-    public float staminaRegenCooldown;
-    public TextMesh staminaText;
 
     // Update is called once per frame
     void Update()
     {
-
-        if (staminaRegenCooldown <= 0f && stamina < 16f)
-            stamina = stamina + Time.deltaTime;
-        staminaRegenCooldown = staminaRegenCooldown - Time.deltaTime;
-
-        staminaText.text = ("Stamina" + stamina);
 
         //if both inputs for the UpDown variable is not pressed, it will be set to 0
         //if either are pressed, they will set the UpDown variable to the number below
@@ -50,23 +40,6 @@ public class Movement : MonoBehaviour
         {
 
             UpDown = 1f;
-            if (Input.GetKey("left shift"))
-            {
-
-                if (stamina >= 0.1f)
-                {
-
-                    stamina = stamina - Time.deltaTime;
-                    speedModifier = 2.8f;
-                    staminaRegenCooldown = 2.5f;
-
-                }
-                else
-                    speedModifier = 1.4f;
-
-            }
-            else
-                speedModifier = 1.4f;
 
         }
 
@@ -74,23 +47,6 @@ public class Movement : MonoBehaviour
         {
 
             UpDown = -1f;
-            if (Input.GetKey("left shift"))
-            {
-
-                if (stamina >= 0.1f)
-                {
-
-                    stamina = stamina - Time.deltaTime;
-                    speedModifier = 2.8f;
-                    staminaRegenCooldown = 2.5f;
-
-                }
-                else
-                    speedModifier = 1.4f;
-
-            }
-            else
-                speedModifier = 1.4f;
 
         }
 
@@ -109,23 +65,6 @@ public class Movement : MonoBehaviour
         {
 
             Sideways = 1f;
-            if (Input.GetKey("left shift"))
-            {
-
-                if (stamina >= 0.1f)
-                {
-
-                    stamina = stamina - Time.deltaTime;
-                    speedModifier = 2.8f;
-                    staminaRegenCooldown = 2.5f;
-
-                }
-                else
-                    speedModifier = 1.4f;
-
-            }
-            else
-                speedModifier = 1.4f;
 
         }
 
@@ -133,24 +72,7 @@ public class Movement : MonoBehaviour
         {
 
             Sideways = -1f;
-            if (Input.GetKey("left shift"))
-            {
-
-                if (stamina >= 0.1f)
-                {
-
-                    stamina = stamina - Time.deltaTime;
-                    speedModifier = 2.8f;
-                    staminaRegenCooldown = 2.5f;
-
-                }
-                else
-                    speedModifier = 1.4f;
-
-            }
-            else
-                speedModifier = 1.4f;
-
+            
         }
 
         //uses a regular x,y coordinate system to determine which direction to rotate
@@ -200,7 +122,7 @@ public class Movement : MonoBehaviour
         coffeeBoostTimer = coffeeBoostTimer - Time.deltaTime;
         if (coffeeBoostTimer < 1)
         {
-            coffeeSpeedModifier = 1;
+            coffeeSpeedModifier = 2;
         }
 
         Vector2 mousePos = Input.mousePosition;
@@ -219,13 +141,13 @@ public class Movement : MonoBehaviour
         Vector2 move = new Vector2(Sideways, UpDown);
 
         //uses the Vector3 just created to move the character using the speed variable and deltaTime as to smooth out the movement independent of framerate
-        transform.Translate(move * Time.deltaTime * Speed * speedModifier * coffeeSpeedModifier);
+        transform.Translate(move * Time.deltaTime * Speed * coffeeSpeedModifier);
 
     }
     public void CoffeeBoost()
     {
-        coffeeSpeedModifier = 3;
-        coffeeBoostTimer = 5;
+        coffeeSpeedModifier = 4;
+        coffeeBoostTimer = 3;
 
     }
 
