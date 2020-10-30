@@ -61,8 +61,12 @@ MonoBehaviour:
   shootingDirection: {fileID: 8791924195390361067}
   shotOrigin: {x: 0, y: 0}
   enemyHealth: {fileID: 0}
+  zombieInfection: {fileID: 0}
+  zombieDamage: {fileID: 0}
   bossHealth: {fileID: 0}
   ammoCounterScript: {fileID: 0}
   hitPointParticle: {fileID: 2099646572536834986, guid: 4f80a72639915c34ebb27bacb625636d, type: 3}
   antiBacGrenade: {fileID: 4910516739635614477, guid: 938bd5eae29c9d940863d3e3bed5d8cc, type: 3}
   lunchLassSprite: {fileID: 0}
+  shootingCooldown: 0
+  grenadeCooldown: 0
