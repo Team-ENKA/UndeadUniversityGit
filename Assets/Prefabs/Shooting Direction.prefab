@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23aea8b4d92aa11408edb123ffdec563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PT: {fileID: 0}
+  ShootingDirection: {fileID: 8791924195390361067}
 --- !u!114 &2063459041532457890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,15 +58,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   capsuleTransform: {fileID: 0}
-  shootingDirection: {fileID: 8791924195390361067}
+  shootingDirection: {fileID: 0}
   shotOrigin: {x: 0, y: 0}
   enemyHealth: {fileID: 0}
   zombieInfection: {fileID: 0}
   zombieDamage: {fileID: 0}
   bossHealth: {fileID: 0}
   ammoCounterScript: {fileID: 0}
+  nERFCounterScript: {fileID: 0}
   hitPointParticle: {fileID: 2099646572536834986, guid: 4f80a72639915c34ebb27bacb625636d, type: 3}
-  antiBacGrenade: {fileID: 4910516739635614477, guid: 938bd5eae29c9d940863d3e3bed5d8cc, type: 3}
+  nERFHitPointParticle: {fileID: 2347767524069093820, guid: 9307c0b7865912a42b87360ec9c3d2ff, type: 3}
   lunchLassSprite: {fileID: 0}
   shootingCooldown: 0
   grenadeCooldown: 0

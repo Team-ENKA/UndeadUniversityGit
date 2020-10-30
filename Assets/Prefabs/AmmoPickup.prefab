@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Color: {r: 0.033161215, g: 0.4082433, b: 0.6509434, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 000000000f0fac06cf04424ef9fe0d04
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -173,8 +173,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1312949455
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4dc77578f8ea2074e81f3bd0489d35a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -290,8 +290,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1312949455
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &8378672778289200891
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1973785689182816246}
   m_maskType: 0
-  _SortingLayerID: 0
+  _SortingLayerID: 1312949455
   _SortingOrder: 0
 --- !u!50 &5824285224726569762
 Rigidbody2D:
