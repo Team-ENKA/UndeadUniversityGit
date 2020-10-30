@@ -27,17 +27,17 @@ public class Floorselection : MonoBehaviour
         }
         if (GUILayout.Button("Floor 1"))
         {
-            SceneManager.LoadScene("Floor 1", LoadSceneMode.Single);
+            SceneManager.LoadScene("Level 3 (floor 1)", LoadSceneMode.Single);
             //when button for floor 1 is pressed, scene "Floor 1" loads.
         }
         if (GUILayout.Button("Floor 2"))
         {
-            SceneManager.LoadScene("Floor 2", LoadSceneMode.Single);
+            SceneManager.LoadScene("Level 2 (floor 2)", LoadSceneMode.Single);
             //when button for floor 2 is pressed, scene "Floor 2" loads.
         }
         if (GUILayout.Button("Floor 3"))
         {
-            SceneManager.LoadScene("Floor 3", LoadSceneMode.Single);
+            SceneManager.LoadScene("Level 1 (floor 3)", LoadSceneMode.Single);
             //when button for floor 3 is pressed, scene "Floor 3" loads.
         }
     }

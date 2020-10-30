@@ -9,20 +9,26 @@ EditorBuildSettings:
     path: Assets/Scenes/_StartMenu.unity
     guid: af3fb0a59e378bb4ca38a2d2b047226e
   - enabled: 0
-    path: Assets/Scenes/Floor 3.unity
+    path: Assets/Scenes/Old/Floor 3.unity
     guid: 2397172edb5404d4ba37da45f961cbc4
   - enabled: 0
-    path: Assets/Scenes/Floor 2.unity
+    path: Assets/Scenes/Old/Floor 2.unity
     guid: 8f64368debad6784491b8571e4a8309b
   - enabled: 0
-    path: Assets/Scenes/Floor 1.unity
+    path: Assets/Scenes/Old/Floor 1.unity
     guid: c5afd9ecf24643342b2ebef8eb27c325
-  - enabled: 0
-    path: Assets/Scenes/Basement.unity
-    guid: ecd20ea0668e8b7448bfebfc48a730ad
   - enabled: 1
-    path: Assets/Scenes/Level 1 (floor 3).unity
+    path: Assets/Scenes/New/Level 1 (floor 3).unity
     guid: 2b01b85a69f3d52469447a59c4a40668
+  - enabled: 1
+    path: Assets/Scenes/New/Level 2 (floor 2).unity
+    guid: 65ba562e34f6f5643861968dcc99e8ce
+  - enabled: 1
+    path: Assets/Scenes/New/Level 3 (floor 1).unity
+    guid: 8de3a5a961189f3418f232148989e408
+  - enabled: 1
+    path: Assets/Scenes/New/Basement.unity
+    guid: ecd20ea0668e8b7448bfebfc48a730ad
   - enabled: 1
     path: Assets/Scenes/Elevator.unity
     guid: 46df539340a9e4a4dac5175837ad416b
