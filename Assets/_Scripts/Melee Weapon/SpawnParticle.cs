@@ -15,7 +15,7 @@ public class SpawnParticle : MonoBehaviour
 
         meleeATKCooldown = meleeATKCooldown - Time.deltaTime;
 
-        if (Input.GetKeyDown("i"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
 
             meleeATK = Instantiate(attack, transform.position, transform.rotation);
