@@ -618,10 +618,12 @@ MonoBehaviour:
   currentHealth: 0
   ZombieDamageBar: {fileID: 1942703946436258159}
   Zombie_AI: {fileID: 6949561496242566077}
+  Zombie_transform: {fileID: 0}
   playerInvincibility: 0
   deathEffectParticles: 100
   deathParticle: {fileID: 8510087422334560741, guid: f044ef37a6ec40d4b9b646036a7087e6, type: 3}
   cured_sprite: {fileID: 3242913987534933499}
+  cured_human: {fileID: 7756347434538133345}
 --- !u!114 &8996689346202821989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1066,7 +1068,7 @@ MonoBehaviour:
   - {x: -0.711037, y: 1.0724157, z: 0}
   m_ShapePathHash: -1373746713
   m_Mesh: {fileID: 0}
-  m_InstanceId: -104098
+  m_InstanceId: -50862
 --- !u!1 &7489742597444930800
 GameObject:
   m_ObjectHideFlags: 0

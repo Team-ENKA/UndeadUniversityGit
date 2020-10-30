@@ -73,10 +73,8 @@ public class ZombieInfectionController : MonoBehaviour
         
        Zombie_AI.GetComponentInChildren<CuredHuman>().CuredH();
         switchTargetDestination.SwitchTarget();
-       
-
-            Destroy(Zombie_sprite);
-        Debug.Log("Zombie is dead");
+            //Destroy(Zombie_sprite);
+        Debug.Log("Infection Reached 0");
 
         
     }   

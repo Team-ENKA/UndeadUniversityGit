@@ -5007,6 +5007,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   die: {fileID: 0}
+  deathParticle: {fileID: 8510087422334560741, guid: f044ef37a6ec40d4b9b646036a7087e6, type: 3}
+  deathEffectParticles: 20
 --- !u!1 &4727754343409907412
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,7 +5037,7 @@ Transform:
   m_GameObject: {fileID: 4727754343409907412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.44, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: -5, y: 5, z: 1}
   m_Children:
   - {fileID: 3243667740117625905}
   - {fileID: 2681782089889226964}

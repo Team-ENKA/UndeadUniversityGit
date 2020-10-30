@@ -17,6 +17,7 @@ public class ZombieDamageController : MonoBehaviour
     public float deathEffectParticles;
     public GameObject deathParticle;
     public GameObject cured_sprite;
+    public CuredHuman cured_human;
 
     public void GotShot()
     {
@@ -52,12 +53,13 @@ public class ZombieDamageController : MonoBehaviour
         currentHealth -= damage;
         ZombieDamageBar.SetHealth(currentHealth);
 
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             for (int i = 0; i < deathEffectParticles; i++)
                 Instantiate(deathParticle, transform.position, Quaternion.identity);
             Destroy(Zombie_AI);
-            Instantiate(cured_sprite, Zombie_transform);
+            Debug.Log("Damage reached 0");
+            //cured_human.CuredH();
             //GetComponent<Student_Cured_Image_midground>().Cured;
 
         }

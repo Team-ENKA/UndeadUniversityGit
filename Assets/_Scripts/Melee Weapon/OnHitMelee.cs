@@ -7,11 +7,14 @@ public class OnHitMelee : MonoBehaviour
 {
 
     public ZombieDamageController die;
+    public GameObject deathParticle;
+    public int deathEffectParticles;
     
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        die = collision.GetComponent<ZombieDamageController>();
+        for (int i = 0; i < deathEffectParticles; i++)
+            Instantiate(deathParticle, transform.position, Quaternion.identity);
+        die = collision.GetComponentInChildren<ZombieDamageController>();
         die.GotShot();
     }
 

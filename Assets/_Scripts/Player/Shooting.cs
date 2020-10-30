@@ -73,12 +73,6 @@ public class Shooting : MonoBehaviour
                     zombieInfection = hit.collider.gameObject.GetComponentInChildren<ZombieInfectionController>();
                     zombieInfection.GotShot();
                 }
-           
-                if (Input.GetKeyDown(KeyCode.Mouse1))
-                {
-                    zombieDamage = hit.collider.gameObject.GetComponentInChildren<ZombieDamageController>();
-                    zombieDamage.GotShot();
-                }   
             }
    
             if (hit.collider.tag == "Boss")

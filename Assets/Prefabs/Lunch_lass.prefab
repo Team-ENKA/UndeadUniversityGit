@@ -442,9 +442,7 @@ MonoBehaviour:
   UpDown: 0
   Sideways: 0
   movementType: 0
-  stamina: 10000
-  staminaRegenCooldown: 0
-  staminaText: {fileID: 8386547467195109080}
+  Speed: 18
 --- !u!50 &5441200227653669802
 Rigidbody2D:
   serializedVersion: 4
@@ -538,6 +536,7 @@ GameObject:
   - component: {fileID: 5441200228143034863}
   - component: {fileID: 6008255546013963240}
   - component: {fileID: 1723804857592731364}
+  - component: {fileID: 103983933}
   m_Layer: 0
   m_Name: lunch_lass
   m_TagString: Player
@@ -644,6 +643,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Door: {fileID: 0}
   openLockedDoor: {fileID: 0}
+--- !u!114 &103983933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5441200228143034858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c7d5b9efddf37469924d946fa3803e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: {fileID: 4727754343409907412, guid: f21f96c84e338cd438c7895f951c3f76, type: 3}
+  meleeATKCooldown: 0
 --- !u!1 &5834898836146275169
 GameObject:
   m_ObjectHideFlags: 0
