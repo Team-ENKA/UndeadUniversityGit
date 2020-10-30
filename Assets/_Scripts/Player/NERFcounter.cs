@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class NERFcounter : MonoBehaviour
 {
     public int NERFammo;
-    public int NERFammoBag;
     public Text NERFText;
     public Shooting NERFhasAmmo;
 
@@ -14,7 +13,7 @@ public class NERFcounter : MonoBehaviour
     public void NERFAddMag()
     {
 
-        NERFammoBag += 10;
+        NERFammo += 20;
 
     }
 
@@ -24,22 +23,15 @@ public class NERFcounter : MonoBehaviour
         if (NERFammo >= 1f)
         {
 
-            NERFhasAmmo.Shoot();
+            NERFhasAmmo.NERFShoot();
             NERFammo--;
 
         }
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        NERFText.text = ("Magazine: " + NERFammo + " / Ammunition" + NERFammoBag);
+        NERFText.text = ("NERF Clip: " + NERFammo);
     }
 }

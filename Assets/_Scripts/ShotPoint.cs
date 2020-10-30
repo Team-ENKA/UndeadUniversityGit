@@ -5,14 +5,14 @@ using UnityEngine;
 public class ShotPoint : MonoBehaviour
 {
 
-    public Transform PT;
+    public Transform ShootingDirection;
 
     // Update is called once per frame
     void Update()
     {
 
         //Sets the position for one of the transforms used to cast a line by the Shooting script
-        transform.position = new Vector3(PT.position.x, PT.position.y, 0f);
+        transform.position = new Vector3(ShootingDirection.position.x, ShootingDirection.position.y, 0f);
 
     }
 }

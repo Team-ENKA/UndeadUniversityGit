@@ -14,8 +14,9 @@ public class Shooting : MonoBehaviour
     public ZombieDamageController zombieDamage;
     public BossHealthController bossHealth;
     public AmmoCounter ammoCounterScript;
+    public NERFcounter nERFCounterScript;
     public GameObject hitPointParticle;
-    public GameObject antiBacGrenade;
+    public GameObject nERFHitPointParticle;
     public Transform lunchLassSprite;
     public float shootingCooldown;
     public float grenadeCooldown;
@@ -36,8 +37,9 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Mouse1) && grenadeCooldown <= 0f)
         {
-            grenadeCooldown = 2f;
-            Instantiate(antiBacGrenade, capsuleTransform.position, lunchLassSprite.rotation);
+            nERFCounterScript.AmmoCheck();
+            //grenadeCooldown = 2f;
+            //Instantiate(nERFHitPointParticle, capsuleTransform.position, lunchLassSprite.rotation);
         }
     }
 
@@ -79,6 +81,38 @@ public class Shooting : MonoBehaviour
                 }   
             }
    
+            if (hit.collider.tag == "Boss")
+            {
+                bossHealth = hit.collider.gameObject.GetComponentInChildren<BossHealthController>();
+                bossHealth.GotShot();
+            }
+        }
+    }
+    public void NERFShoot()
+    {
+        shotOrigin = new Vector2(capsuleTransform.position.x, capsuleTransform.position.y);
+        RaycastHit2D hit = Physics2D.Linecast(shotOrigin, shootingDirection.position);
+        Debug.DrawLine(shotOrigin, hit.point, Color.red, 20f);
+
+        if (hit.collider != null)
+        {
+            Vector3 hitPoint = new Vector3(hit.point.x, hit.point.y, 0f);
+
+            float nERFhitPointParticles = Random.Range(2, 6);
+            for (int i = 0; i < nERFhitPointParticles; i++)
+            {
+                Instantiate(nERFHitPointParticle, hitPoint, Quaternion.identity);
+            }
+
+            if (hit.collider.tag == "Enemy")
+            {
+                if (Input.GetKeyDown(KeyCode.Mouse1))
+                {
+                    zombieDamage = hit.collider.gameObject.GetComponentInChildren<ZombieDamageController>();
+                    zombieDamage.GotShot();
+                }
+            }
+
             if (hit.collider.tag == "Boss")
             {
                 bossHealth = hit.collider.gameObject.GetComponentInChildren<BossHealthController>();
