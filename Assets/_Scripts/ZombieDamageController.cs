@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using Pathfinding;
 
 public class ZombieDamageController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ZombieDamageController : MonoBehaviour
     public ZombieDamageBar ZombieDamageBar;
 
     public GameObject Zombie_AI;
+    public Transform Zombie_transform;
     public float playerInvincibility;
 
     public float deathEffectParticles;
@@ -54,10 +56,10 @@ public class ZombieDamageController : MonoBehaviour
         {
             for (int i = 0; i < deathEffectParticles; i++)
                 Instantiate(deathParticle, transform.position, Quaternion.identity);
-            //Destroy(Zombie);
             Destroy(Zombie_AI);
-            //Instantiate(cured_sprite);
+            Instantiate(cured_sprite, Zombie_transform);
             //GetComponent<Student_Cured_Image_midground>().Cured;
+
         }
     }
 }
