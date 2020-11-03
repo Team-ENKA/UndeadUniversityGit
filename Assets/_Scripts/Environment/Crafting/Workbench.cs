@@ -6,7 +6,6 @@ using TMPro;
 
 public class Workbench : MonoBehaviour
 {
-    public bool weaponIsActive = false;
     public Button craftButton;
     public GameObject craftScreen;
     public Canvas insuffMats;
