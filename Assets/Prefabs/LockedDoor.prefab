@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4, y: -6.5}
+  m_Offset: {x: 6.4918923, y: -6.6753316}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 17}
+  m_Size: {x: 9.983785, y: 19.38456}
   m_EdgeRadius: 0
 --- !u!61 &3542457855738552254
 BoxCollider2D:
@@ -90,7 +90,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4, y: -6.5}
+  m_Offset: {x: -6.5096903, y: -6.5876665}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -101,7 +101,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 17}
+  m_Size: {x: 10.019382, y: 19.279371}
   m_EdgeRadius: 0
 --- !u!1 &3542457857156249706
 GameObject:
@@ -161,7 +161,7 @@ MonoBehaviour:
   - {x: -5.284841, y: 0.68770266, z: 0}
   m_ShapePathHash: -984061895
   m_Mesh: {fileID: 0}
-  m_InstanceId: -219404
+  m_InstanceId: 31924
 --- !u!212 &6303455447879600880
 SpriteRenderer:
   m_ObjectHideFlags: 0
