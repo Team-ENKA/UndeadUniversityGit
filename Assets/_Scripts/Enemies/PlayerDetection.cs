@@ -10,7 +10,7 @@ public class PlayerDetection : MonoBehaviour
     public Transform zombieScanTransform;
     public Transform playerPos;
     public AIDestinationSetter Destination;
-    int layerMask = 13;
+    int layerMask = 1 << 13;
 
     // Update is called once per frame
     void Update()

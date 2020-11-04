@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8109458272606718320}
   - component: {fileID: 5296779274152690575}
   - component: {fileID: 1549740573652290334}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: InfectionFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4270131823311978730}
   - component: {fileID: 1942703946436258159}
   - component: {fileID: 150165330005254995}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: ZombieHealthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 4368251316691384934}
   - component: {fileID: 3372140993751136245}
   - component: {fileID: 7756347434538133345}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cured Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,8 +320,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1312949455
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a7050f8e53f011843ab642923029cff1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -356,7 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5740370511580924254}
   - component: {fileID: 7792323196270238669}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 1430216725705477102}
   m_Layer: 0
   m_Name: Fully Infected Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 5690498766051693709}
   - component: {fileID: 2140303010277776220}
   - component: {fileID: 8398784125732302985}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,6 +750,7 @@ GameObject:
   - component: {fileID: 6656645549332155010}
   - component: {fileID: 2590302607751081852}
   - component: {fileID: 3783978046527001013}
+  - component: {fileID: 306659717477171894}
   - component: {fileID: 271581457}
   m_Layer: 0
   m_Name: Zombie_AI
@@ -883,6 +884,22 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 0
   whenCloseToDestination: 1
   constrainInsideGraph: 0
+--- !u!114 &306659717477171894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6949561496242566077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5948c4464ff1b0943a4e6b3713ba5146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scanOrigin: {x: 0, y: 0}
+  zombieScanTransform: {fileID: 1549038595719880428}
+  playerPos: {fileID: 0}
+  Destination: {fileID: 6656645549332155010}
 --- !u!50 &271581457
 Rigidbody2D:
   serializedVersion: 4
@@ -1068,7 +1085,7 @@ MonoBehaviour:
   - {x: -0.711037, y: 1.0724157, z: 0}
   m_ShapePathHash: -1373746713
   m_Mesh: {fileID: 0}
-  m_InstanceId: -50862
+  m_InstanceId: -37902
 --- !u!1 &7489742597444930800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,7 +1096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1108139074483884435}
   - component: {fileID: 2831126988665991798}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light 2D (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
