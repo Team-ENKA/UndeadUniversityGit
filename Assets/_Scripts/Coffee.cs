@@ -21,8 +21,8 @@ public class Coffee : MonoBehaviour
         if (Input.GetKey("e") && collision.gameObject.tag == "Player")
         {
 
-            Destroy(gameObject);
             Movement.CoffeeBoost();
+            Destroy(gameObject);
 
         }
 
