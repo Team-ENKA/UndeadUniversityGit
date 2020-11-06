@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8109458272606718320}
   - component: {fileID: 5296779274152690575}
   - component: {fileID: 1549740573652290334}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: InfectionFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4270131823311978730}
   - component: {fileID: 1942703946436258159}
   - component: {fileID: 150165330005254995}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: ZombieHealthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 4368251316691384934}
   - component: {fileID: 3372140993751136245}
   - component: {fileID: 7756347434538133345}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Cured Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1549038595719880428}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &3372140993751136245
 SpriteRenderer:
@@ -356,7 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5740370511580924254}
   - component: {fileID: 7792323196270238669}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,88 +418,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &4472948100663760136
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8510218571810874740}
-  - component: {fileID: 1430216725705477102}
-  m_Layer: 0
-  m_Name: Fully Infected Sprite
-  m_TagString: Enemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8510218571810874740
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4472948100663760136}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1549038595719880428}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!212 &1430216725705477102
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4472948100663760136}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 81a7a16e9e0582b41a5de04b2e70a67a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 5, y: 5}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 1
-  m_SpriteSortPoint: 0
 --- !u!1 &4526291106107135475
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,10 +430,9 @@ GameObject:
   - component: {fileID: 6652168344933040297}
   - component: {fileID: 5753269103645829211}
   - component: {fileID: 5904290373730681359}
-  - component: {fileID: 8854707178280290996}
   - component: {fileID: 8996689346202821989}
   - component: {fileID: 5879114361966937585}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Health_Infection_Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,33 +514,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
+  m_IgnoreReversedGraphics: 0
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8854707178280290996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4526291106107135475}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3280b90b22aaa624d95695076358efe0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 30
-  currentHealth: 0
-  ZombieDamageBar: {fileID: 1942703946436258159}
-  Zombie_AI: {fileID: 6949561496242566077}
-  Zombie_transform: {fileID: 0}
-  playerInvincibility: 0
-  deathEffectParticles: 100
-  deathParticle: {fileID: 8510087422334560741, guid: f044ef37a6ec40d4b9b646036a7087e6, type: 3}
-  cured_sprite: {fileID: 3242913987534933499}
-  cured_human: {fileID: 7756347434538133345}
 --- !u!114 &8996689346202821989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,15 +533,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 30
   currentHealth: 0
+  deathEffectParticles: 30
   ZombieDamageBar: {fileID: 1942703946436258159}
+  deathParticle: {fileID: 8510087422334560741, guid: f044ef37a6ec40d4b9b646036a7087e6, type: 3}
   Zombie_AI: {fileID: 6949561496242566077}
   Infectionbar: {fileID: 3122863809213870804}
-  playerInvincibility: 0
-  deathEffectParticles: 30
-  deathParticle: {fileID: 8510087422334560741, guid: f044ef37a6ec40d4b9b646036a7087e6, type: 3}
-  CuredZ: {fileID: 1490932571094454376}
   Zombie_sprite: {fileID: 7342537277073457753}
-  switchTargetDestination: {fileID: 3024049701081052271}
+  switchTargetDestination: {fileID: 6656645549332155010}
 --- !u!114 &5879114361966937585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,7 +565,7 @@ GameObject:
   - component: {fileID: 5690498766051693709}
   - component: {fileID: 2140303010277776220}
   - component: {fileID: 8398784125732302985}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -745,14 +638,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1549038595719880428}
-  - component: {fileID: 5580212017652486294}
-  - component: {fileID: 3024049701081052271}
   - component: {fileID: 6656645549332155010}
   - component: {fileID: 2590302607751081852}
   - component: {fileID: 3783978046527001013}
   - component: {fileID: 306659717477171894}
   - component: {fileID: 271581457}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zombie_AI
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -770,14 +661,12 @@ Transform:
   m_LocalPosition: {x: -2, y: 71, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
-  - {fileID: 7061101206301947133}
   - {fileID: 4368251316691384934}
   - {fileID: 4646550137810766149}
-  - {fileID: 8510218571810874740}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &5580212017652486294
+--- !u!114 &6656645549332155010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -790,36 +679,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  target: {fileID: 0}
---- !u!114 &3024049701081052271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6949561496242566077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f82ca4b4b36f9948b4845118ec3fa51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  infectedDestination: {fileID: 6656645549332155010}
-  curedDestination: {fileID: 5580212017652486294}
-  patrolPoints: {fileID: 0}
---- !u!114 &6656645549332155010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6949561496242566077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  target: {fileID: 0}
+  targetPlayer: {fileID: 0}
+  player: {fileID: 0}
+  targetCuredZ: {fileID: 0}
+  curedZDestination: {fileID: 0}
+  target: 0
 --- !u!114 &2590302607751081852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,9 +760,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5948c4464ff1b0943a4e6b3713ba5146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scanOrigin: {x: 0, y: 0}
   zombieScanTransform: {fileID: 1549038595719880428}
   playerPos: {fileID: 0}
+  player: {fileID: 0}
   Destination: {fileID: 6656645549332155010}
 --- !u!50 &271581457
 Rigidbody2D:
@@ -931,10 +795,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4646550137810766149}
   - component: {fileID: 3377109356695002949}
-  - component: {fileID: 1490932571094454376}
   - component: {fileID: 5964392636811597494}
   - component: {fileID: 5565426397140458997}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zombie sprite
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -956,7 +819,7 @@ Transform:
   - {fileID: 5740370511580924254}
   - {fileID: 1108139074483884435}
   m_Father: {fileID: 1549038595719880428}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &3377109356695002949
 SpriteRenderer:
@@ -1009,19 +872,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1490932571094454376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7342537277073457753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63a6e24809132b749bc6d75e76373865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombieDamageController: {fileID: 0}
 --- !u!70 &5964392636811597494
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1085,7 +935,7 @@ MonoBehaviour:
   - {x: -0.711037, y: 1.0724157, z: 0}
   m_ShapePathHash: -1373746713
   m_Mesh: {fileID: 0}
-  m_InstanceId: -37902
+  m_InstanceId: -1304
 --- !u!1 &7489742597444930800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1108139074483884435}
   - component: {fileID: 2831126988665991798}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Point Light 2D (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,124 +1008,3 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &9124192163516982981
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7061101206301947133}
-  - component: {fileID: 8705067495180360717}
-  - component: {fileID: 4134133797063208384}
-  - component: {fileID: 1951360297217849655}
-  m_Layer: 0
-  m_Name: Ehealth01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7061101206301947133
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124192163516982981}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -10.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1549038595719880428}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8705067495180360717
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124192163516982981}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cffc25831ded14a4cada33e189ccbc4e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 35.079998, y: 24.802656}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &4134133797063208384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124192163516982981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e99fe33bb20b844988d641115915cdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyFullHealth:
-  - {fileID: 21300000, guid: b0ba9189a5ba1394b863711c8daf23f5, type: 3}
-  - {fileID: 21300000, guid: a99113d00aa97f841b0a8ff9b6e649a5, type: 3}
-  - {fileID: 21300000, guid: d506aa994e656174494d925afea0d332, type: 3}
-  - {fileID: 21300000, guid: 9d65da2a89ddee84fadd5b71136b5215, type: 3}
-  - {fileID: 21300000, guid: cffc25831ded14a4cada33e189ccbc4e, type: 3}
-  Zombie: {fileID: 6949561496242566077}
-  CuredZ: {fileID: 1490932571094454376}
-  CuredH: {fileID: 7756347434538133345}
-  targetSwitch: {fileID: 3024049701081052271}
-  SpriteRenderer: {fileID: 8705067495180360717}
-  zombieSprite: {fileID: 7342537277073457753}
---- !u!114 &1951360297217849655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9124192163516982981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4f6eb58fb4f86f4083e148e1335cd44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eh: {fileID: 4134133797063208384}
