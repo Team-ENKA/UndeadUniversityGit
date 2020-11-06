@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 563378414}
   - component: {fileID: 563378416}
   - component: {fileID: 563378415}
-  - component: {fileID: 917670941}
+  - component: {fileID: 1347924832}
   m_Layer: 5
   m_Name: NERFAmmoCounter
   m_TagString: Untagged
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.92941177, g: 0.80784315, b: 0.3254902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -80,7 +80,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'NERF clip: '
---- !u!114 &917670941
+--- !u!114 &1347924832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2221691518130055733
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1197,6 +1197,7 @@ GameObject:
   - component: {fileID: 7908996214577731418}
   - component: {fileID: 1616644767}
   - component: {fileID: 2536888326573633891}
+  - component: {fileID: 7161232402560073790}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Canvas
@@ -1313,6 +1314,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2536888326573633891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7574324388543614334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ca0a505ef40724397bda80242ae703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7161232402560073790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
