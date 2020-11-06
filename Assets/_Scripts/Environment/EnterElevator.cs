@@ -13,6 +13,7 @@ public class EnterElevator : MonoBehaviour
         {
             playerTransform.position = Vector2.zero;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
+
         }   
     }
 

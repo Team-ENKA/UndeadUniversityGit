@@ -9,19 +9,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 891589889296753116, guid: 62ef7dd92e9a9c8438abdf0864de42a0, type: 3}
       propertyPath: m_Color.r
-      value: 0.92941177
+      value: 0.9622642
       objectReference: {fileID: 0}
     - target: {fileID: 891589889296753116, guid: 62ef7dd92e9a9c8438abdf0864de42a0, type: 3}
       propertyPath: m_Color.g
-      value: 0.80784315
+      value: 0.8444514
       objectReference: {fileID: 0}
     - target: {fileID: 891589889296753116, guid: 62ef7dd92e9a9c8438abdf0864de42a0, type: 3}
       propertyPath: m_Color.b
-      value: 0.3254902
+      value: 0.10348873
       objectReference: {fileID: 0}
     - target: {fileID: 1856843296757443420, guid: 62ef7dd92e9a9c8438abdf0864de42a0, type: 3}
       propertyPath: m_Name
-      value: Wall Lamp (4)
+      value: Yellow Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 4208898030351367896, guid: 62ef7dd92e9a9c8438abdf0864de42a0, type: 3}
       propertyPath: m_LocalPosition.x
