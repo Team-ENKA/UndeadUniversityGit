@@ -15,7 +15,7 @@ public class AntibacSledge : MonoBehaviour
 
         meleeATKCooldown = meleeATKCooldown - Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && meleeATKCooldown <= 0f)
         {
 
             meleeATK = Instantiate(attack, transform.position, transform.rotation);

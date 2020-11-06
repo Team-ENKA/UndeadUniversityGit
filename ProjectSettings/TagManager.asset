@@ -12,6 +12,7 @@ TagManager:
   - Walls
   - Coffee
   - curedZDestination
+  - Canvas
   layers:
   - Default
   - TransparentFX
