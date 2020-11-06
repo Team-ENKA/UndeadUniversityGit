@@ -760,7 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5948c4464ff1b0943a4e6b3713ba5146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieScanTransform: {fileID: 1549038595719880428}
+  zombieScanTransform: {fileID: 0}
   playerPos: {fileID: 0}
   player: {fileID: 0}
   Destination: {fileID: 6656645549332155010}

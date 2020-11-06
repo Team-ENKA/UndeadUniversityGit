@@ -18,6 +18,7 @@ public class PlayerDetection : MonoBehaviour
         layerMask = ~layerMask;
         player = GameObject.FindGameObjectWithTag("Player");
         playerPos = player.GetComponent<Transform>();
+        zombieScanTransform = transform;
 
     }
 
