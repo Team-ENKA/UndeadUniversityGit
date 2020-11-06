@@ -12,7 +12,6 @@ public class Shooting : MonoBehaviour
     public EnemyHealthController enemyHealth;
     public ZombieInfectionController zombieInfection;
     public ZombieDamageController zombieDamage;
-    public BossHealthController bossHealth;
     public AmmoCounter ammoCounterScript;
     public NERFcounter nERFCounterScript;
     public GameObject hitPointParticle;
@@ -45,6 +44,7 @@ public class Shooting : MonoBehaviour
 
     public void Shoot()
     {
+
         //Creates a new Vector2 using the the first components x and y transforms
         shotOrigin = new Vector2(capsuleTransform.position.x, capsuleTransform.position.y);
         RaycastHit2D hit = Physics2D.Linecast(shotOrigin, shootingDirection.position);
@@ -54,33 +54,30 @@ public class Shooting : MonoBehaviour
         //to an object tagged as target, it will use the EnemyHealthController to lower the targets health
         if (hit.collider != null)
         {
+
             Vector3 hitPoint = new Vector3(hit.point.x, hit.point.y, 0f);
 
             float hitPointParticles = Random.Range(2, 6);
             for (int i = 0; i < hitPointParticles; i++)
             {
+
                 Instantiate(hitPointParticle, hitPoint, Quaternion.identity);
+
             }
 
             if (hit.collider.tag == "Enemy")
             {
-
-                /*enemyHealth = hit.collider.gameObject.GetComponentInChildren<EnemyHealthController>();
-                enemyHealth.GotShot();*/
 
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     zombieInfection = hit.collider.gameObject.GetComponentInChildren<ZombieInfectionController>();
                     zombieInfection.GotShot();
                 }
+
             }
-   
-            if (hit.collider.tag == "Boss")
-            {
-                bossHealth = hit.collider.gameObject.GetComponentInChildren<BossHealthController>();
-                bossHealth.GotShot();
-            }
+
         }
+
     }
     public void NERFShoot()
     {
@@ -93,25 +90,29 @@ public class Shooting : MonoBehaviour
             Vector3 hitPoint = new Vector3(hit.point.x, hit.point.y, 0f);
 
             float nERFhitPointParticles = Random.Range(2, 6);
+
             for (int i = 0; i < nERFhitPointParticles; i++)
             {
+
                 Instantiate(nERFHitPointParticle, hitPoint, Quaternion.identity);
+
             }
 
             if (hit.collider.tag == "Enemy")
             {
+
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
+
                     zombieDamage = hit.collider.gameObject.GetComponentInChildren<ZombieDamageController>();
                     zombieDamage.GotShot();
+
                 }
+
             }
 
-            if (hit.collider.tag == "Boss")
-            {
-                bossHealth = hit.collider.gameObject.GetComponentInChildren<BossHealthController>();
-                bossHealth.GotShot();
-            }
         }
+
     }
+
 }
