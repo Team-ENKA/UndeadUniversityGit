@@ -241,7 +241,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 68026105
   m_SortingOrder: 2
   m_TargetDisplay: 0
@@ -380,6 +380,7 @@ GameObject:
   - component: {fileID: 4706508287942980002}
   - component: {fileID: 2144506754}
   - component: {fileID: 372270831}
+  - component: {fileID: 6588324697120002398}
   m_Layer: 0
   m_Name: Lunch_lass
   m_TagString: Player
@@ -516,6 +517,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ca0a505ef40724397bda80242ae703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6588324697120002398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5441200227653669780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ca0a505ef40724397bda80242ae703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5441200228143034858
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +542,7 @@ GameObject:
   - component: {fileID: 6008255546013963240}
   - component: {fileID: 1723804857592731364}
   m_Layer: 0
-  m_Name: lunch_lass
+  m_Name: Booo
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
