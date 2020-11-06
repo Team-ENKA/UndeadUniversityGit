@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
     //the speed value is changed depending on movement direction as to not double movement speed when going diagonally
     public float Speed = 18f;
     private float coffeeBoostTimer = 1f;
-    private float coffeeSpeedModifier = 1f;
+    private float coffeeSpeedModifier = 2f;
 
     // Update is called once per frame
     void Update()
