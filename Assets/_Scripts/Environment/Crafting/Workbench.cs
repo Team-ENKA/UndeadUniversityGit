@@ -67,7 +67,7 @@ public class Workbench : MonoBehaviour
         antibacSledge.SetActive(true);
         craftScreen.SetActive(false);
         pressSpace.SetActive(true);
-        spaceActive = 10;
+        spaceActive = 5;
         Debug.Log("CraftClick done");
     }
     private void Update()

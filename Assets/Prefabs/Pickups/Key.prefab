@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys: {fileID: 0}
+  Canvas: {fileID: 0}
 --- !u!61 &78218386
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -211,7 +212,7 @@ GameObject:
   - component: {fileID: 4774058728862881290}
   - component: {fileID: 3597547539443661578}
   - component: {fileID: 8458258605185093705}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
