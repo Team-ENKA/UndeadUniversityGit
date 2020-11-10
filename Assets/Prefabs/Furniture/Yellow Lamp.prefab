@@ -19,9 +19,17 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.10348873
       objectReference: {fileID: 0}
+    - target: {fileID: 1297263488717695779, guid: 62ef7dd92e9a9c8438abdf0864de42a0, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1856843296757443420, guid: 62ef7dd92e9a9c8438abdf0864de42a0, type: 3}
       propertyPath: m_Name
       value: Yellow Lamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856843296757443420, guid: 62ef7dd92e9a9c8438abdf0864de42a0, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4208898030351367896, guid: 62ef7dd92e9a9c8438abdf0864de42a0, type: 3}
       propertyPath: m_LocalPosition.x

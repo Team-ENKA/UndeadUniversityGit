@@ -8,14 +8,19 @@ public class AntibacSledge : MonoBehaviour
     public GameObject attack;
     private GameObject meleeATK;
     public float meleeATKCooldown;
+    public bool sledgeCraft;
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
 
         meleeATKCooldown = meleeATKCooldown - Time.deltaTime;
 
+<<<<<<< HEAD
+        if (Input.GetKeyDown(KeyCode.Space) && sledgeCraft==true)
+=======
         if (Input.GetKeyDown(KeyCode.Space) && meleeATKCooldown <= 0f)
+>>>>>>> 8c7dac3a525067ef0981d0d3b865dd67a47c2b54
         {
 
             meleeATK = Instantiate(attack, transform.position, transform.rotation);

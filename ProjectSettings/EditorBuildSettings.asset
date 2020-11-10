@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Elevator.unity
     guid: 46df539340a9e4a4dac5175837ad416b
+  - enabled: 0
+    path: Assets/Scenes/New/Level 3 (floor 1).unity
+    guid: 8de3a5a961189f3418f232148989e408
+  - enabled: 0
+    path: Assets/Scenes/New/Basement.unity
+    guid: ecd20ea0668e8b7448bfebfc48a730ad
+  - enabled: 0
+    path: Assets/Scenes/Elevator.unity
+    guid: 46df539340a9e4a4dac5175837ad416b
   m_configObjects: {}
