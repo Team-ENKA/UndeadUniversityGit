@@ -13,7 +13,7 @@ public class Workbench : MonoBehaviour
     public PoleBool poleBool;
     public TankBool tankBool;
     public float cooldownsMats;
-    public GameObject antibacSledge;
+    public AntibacSledge antibacSledge;
 
 
     void OnTriggerStay2D(Collider2D collision)
@@ -36,7 +36,7 @@ public class Workbench : MonoBehaviour
     }
     public void CraftClick()
     {
-        antibacSledge.SetActive(true);
+        antibacSledge.sledgeCraft=true;
         craftScreen.SetActive(false);
         Debug.Log("CraftClick done");
     }
