@@ -3,19 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Runtime.CompilerServices;
 
 public class Workbench : MonoBehaviour
 {
-    public Button craftButton;
     public GameObject craftScreen;
     public Canvas insuffMats;
+    public GameObject pressSpace;
 
     public PoleBool poleBool;
     public TankBool tankBool;
+<<<<<<< HEAD
     public float cooldownsMats;
     public AntibacSledge antibacSledge;
+=======
+    public GameObject antibacSledge;
+>>>>>>> 8c7dac3a525067ef0981d0d3b865dd67a47c2b54
 
+    private float cooldownsMats;
+    private int sledgeActive;
+    private float spaceActive;
+    
 
+    private void Start()
+    {
+        antibacSledge.SetActive(false);
+        craftScreen.SetActive(false);
+        pressSpace.SetActive(true);
+        sledgeActive = 0;
+        spaceActive = 0;
+    }
     void OnTriggerStay2D(Collider2D collision)
     {
         //If you're lacking both materials
@@ -26,11 +43,27 @@ public class Workbench : MonoBehaviour
             Debug.Log("Insufficient Materials");
         }
 
+        //If you have one material
+        if (collision.gameObject.tag == "Player" && poleBool.isActive == true && tankBool.isActive == false)
+        {
+            insuffMats.gameObject.SetActive(true);
+            cooldownsMats = 2;
+            Debug.Log("Insufficient Materials");
+        }
+        //If you have one material
+        if (collision.gameObject.tag == "Player" && poleBool.isActive == false && tankBool.isActive == true)
+        {
+            insuffMats.gameObject.SetActive(true);
+            cooldownsMats = 2;
+            Debug.Log("Insufficient Materials");
+        }
+
         //if you have both materials
-        if (collision.gameObject.tag == "Player" && poleBool.isActive == false && tankBool.isActive == false)
+        if (collision.gameObject.tag == "Player" && poleBool.isActive == false && tankBool.isActive == false && sledgeActive == 0)
         {
             craftScreen.SetActive(true);
             insuffMats.gameObject.SetActive(false);
+            sledgeActive++;
             Debug.Log("CraftScreen active");
         }
     }
@@ -38,15 +71,24 @@ public class Workbench : MonoBehaviour
     {
         antibacSledge.sledgeCraft=true;
         craftScreen.SetActive(false);
+        pressSpace.SetActive(true);
+        spaceActive = 5;
         Debug.Log("CraftClick done");
     }
     private void Update()
     {
         cooldownsMats = cooldownsMats - Time.deltaTime;
+        spaceActive = spaceActive - Time.deltaTime;
+
+        if (spaceActive <= 0)
+        {
+            pressSpace.SetActive(false);
+        }
 
         if (cooldownsMats <= 0)
         {
             insuffMats.gameObject.SetActive(false);
         }
+        
     }
 }
