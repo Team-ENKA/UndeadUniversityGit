@@ -6,22 +6,36 @@ using UnityEngine;
 public class PlayerDetection : MonoBehaviour
 {
 
-    public Vector2 scanOrigin;
     public Transform zombieScanTransform;
     public Transform playerPos;
+    public GameObject player;
     public AIDestinationSetter Destination;
-    int layerMask = 13;
+    int layerMask = 1 << 9;
+
+    private void Start()
+    {
+
+        layerMask = ~layerMask;
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerPos = player.GetComponent<Transform>();
+        zombieScanTransform = transform;
+
+    }
 
     // Update is called once per frame
     void Update()
     {
 
-        scanOrigin = new Vector2(zombieScanTransform.position.x, zombieScanTransform.position.y);
-        RaycastHit2D hit = Physics2D.Linecast(scanOrigin, playerPos.position, layerMask);
-        Debug.DrawLine(scanOrigin, playerPos.position, Color.green, 2f);
+        RaycastHit2D hit = Physics2D.Linecast(zombieScanTransform.position, playerPos.position, layerMask);
+
+        Debug.DrawLine(zombieScanTransform.position, playerPos.position, Color.green, 2f);
 
         if (hit.collider.gameObject.tag == "Player")
-            Debug.Log("rawr");
+        {
+
+            Destination.enabled = true;
+
+        }
 
     }
 }

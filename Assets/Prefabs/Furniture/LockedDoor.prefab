@@ -51,6 +51,7 @@ MonoBehaviour:
   Cooldown: 0
   doorTransform: {fileID: 3542457855738552249}
   KA: {fileID: 0}
+  Canvas: {fileID: 0}
 --- !u!61 &3542457855738552251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ MonoBehaviour:
   - {x: -5.284841, y: 0.68770266, z: 0}
   m_ShapePathHash: -984061895
   m_Mesh: {fileID: 0}
-  m_InstanceId: 31924
+  m_InstanceId: -1774
 --- !u!212 &6303455447879600880
 SpriteRenderer:
   m_ObjectHideFlags: 0

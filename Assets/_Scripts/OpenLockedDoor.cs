@@ -11,11 +11,14 @@ public class OpenLockedDoor : MonoBehaviour
     public Transform doorTransform;
 
     public KeyAmount KA;
+    public GameObject Canvas;
 
     private void Update()
     {
 
         Cooldown = Cooldown - Time.deltaTime;
+        Canvas = GameObject.FindGameObjectWithTag("Canvas");
+        KA = Canvas.GetComponentInChildren<KeyAmount>();
 
     }
 

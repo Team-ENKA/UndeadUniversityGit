@@ -8,14 +8,6 @@ public class DoorDetection : MonoBehaviour
     public GameObject Door;
     public OpenLockedDoor openLockedDoor;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
-
-    }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
 

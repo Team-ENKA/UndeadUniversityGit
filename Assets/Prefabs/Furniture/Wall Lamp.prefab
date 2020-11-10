@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4072756692217563107}
   - component: {fileID: 891589889296753116}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4208898030351367896}
   - component: {fileID: 4989303852555047579}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}

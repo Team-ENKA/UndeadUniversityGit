@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8791924195390361067}
   - component: {fileID: 8791924195390361066}
   - component: {fileID: 2063459041532457890}
+  - component: {fileID: 517229007}
+  - component: {fileID: 5879842571060900990}
   m_Layer: 0
   m_Name: Shooting Direction
   m_TagString: Untagged
@@ -63,11 +65,37 @@ MonoBehaviour:
   enemyHealth: {fileID: 0}
   zombieInfection: {fileID: 0}
   zombieDamage: {fileID: 0}
-  bossHealth: {fileID: 0}
   ammoCounterScript: {fileID: 0}
   nERFCounterScript: {fileID: 0}
   hitPointParticle: {fileID: 2099646572536834986, guid: 4f80a72639915c34ebb27bacb625636d, type: 3}
   nERFHitPointParticle: {fileID: 2347767524069093820, guid: 9307c0b7865912a42b87360ec9c3d2ff, type: 3}
   lunchLassSprite: {fileID: 0}
+  Bo: {fileID: 0}
+  BoTransform: {fileID: 0}
   shootingCooldown: 0
   grenadeCooldown: 0
+  layerMask: 8192
+--- !u!114 &517229007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8791924195390361069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ca0a505ef40724397bda80242ae703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5879842571060900990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8791924195390361069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ca0a505ef40724397bda80242ae703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

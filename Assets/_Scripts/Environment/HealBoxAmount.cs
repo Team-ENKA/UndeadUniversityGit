@@ -14,6 +14,7 @@ public class HealBoxAmount : MonoBehaviour
     void Start()
     {
 
+
         //Gets the text component
         Text = GetComponent<Text>();
 
