@@ -13,7 +13,7 @@ public class Workbench : MonoBehaviour
 
     public PoleBool poleBool;
     public TankBool tankBool;
-    public GameObject antibacSledge;
+    public AntibacSledge antibacSledge;
 
     private float cooldownsMats;
     private int sledgeActive;
@@ -22,7 +22,6 @@ public class Workbench : MonoBehaviour
 
     private void Start()
     {
-        antibacSledge.SetActive(false);
         craftScreen.SetActive(false);
         pressSpace.SetActive(true);
         sledgeActive = 0;
@@ -64,7 +63,7 @@ public class Workbench : MonoBehaviour
     }
     public void CraftClick()
     {
-        antibacSledge.SetActive(true);
+        antibacSledge.sledgeCraft=true;
         craftScreen.SetActive(false);
         pressSpace.SetActive(true);
         spaceActive = 5;

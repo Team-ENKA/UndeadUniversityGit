@@ -53,7 +53,7 @@ public class ZombieInfectionController : MonoBehaviour
 
     }
 
-    void ZeroInfection()
+    public void ZeroInfection()
     {
         
         Zombie_AI.GetComponentInChildren<CuredHuman>().CuredH();
