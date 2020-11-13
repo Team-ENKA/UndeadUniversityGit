@@ -147,7 +147,7 @@ public class Movement : MonoBehaviour
     public void CoffeeBoost()
     {
         coffeeSpeedModifier = 4;
-        coffeeBoostTimer = 3;
+        coffeeBoostTimer = 6;
 
     }
 
