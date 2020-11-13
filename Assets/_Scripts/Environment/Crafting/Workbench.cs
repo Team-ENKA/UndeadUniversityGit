@@ -18,7 +18,7 @@ public class Workbench : MonoBehaviour
     private float cooldownsMats;
     private int sledgeActive;
     private float spaceActive;
-    
+    private bool doThing;
 
     private void Start()
     {
@@ -27,6 +27,9 @@ public class Workbench : MonoBehaviour
         sledgeActive = 0;
         spaceActive = 0;
     }
+
+
+
     void OnTriggerStay2D(Collider2D collision)
     {
         //If you're lacking both materials
@@ -65,14 +68,24 @@ public class Workbench : MonoBehaviour
                 pressSpace.SetActive(true);
                 spaceActive = 5;
                 Debug.Log("CraftClick done");
+                doThing = false;
             }
             Debug.Log("CraftScreen active");
+        }
+        else
+        {
+            doThing = false;
         }
     }
     private void Update()
     {
         cooldownsMats = cooldownsMats - Time.deltaTime;
         spaceActive = spaceActive - Time.deltaTime;
+
+        if(Input.GetKey(KeyCode.E))
+        {
+            doThing = true;
+        }
 
         if (spaceActive <= 0)
         {
