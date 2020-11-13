@@ -23,7 +23,7 @@ public class AmmoCounter : MonoBehaviour
     void Update()
     {
 
-        Text.text = ("Magazine: " + ammo + " / Ammunition" + ammoBag);
+        Text.text = ("Ammo: " + ammo + " / " + ammoBag);
 
         if (Input.GetKeyDown("r"))
         {
