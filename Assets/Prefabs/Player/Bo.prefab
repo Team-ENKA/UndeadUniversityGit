@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1081806025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1081806026}
+  m_Layer: 13
+  m_Name: FireworksLaunchPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1081806026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081806025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5441200228143034857}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1289380423
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,12 +364,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 30
-  currentHealth: 0
+  currentHealth: 30
   healthBar: {fileID: 6281335210954722511}
   LunchLass: {fileID: 5441200227653669780}
   playerInvincibility: 1
   deathEffectParticles: 200
   deathParticle: {fileID: 8510087422334560741, guid: f044ef37a6ec40d4b9b646036a7087e6, type: 3}
+  AmountToHeal: 0
+  HealBoxAmount: {fileID: 0}
 --- !u!114 &372270831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,6 +429,7 @@ Transform:
   - {fileID: 1289380424}
   - {fileID: 1721528818504237208}
   - {fileID: 2290162112472788097}
+  - {fileID: 1081806026}
   m_Father: {fileID: 3553240312123783450}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -526,6 +559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: {fileID: 4727754343409907412, guid: f21f96c84e338cd438c7895f951c3f76, type: 3}
   meleeATKCooldown: 0
+  sledgeCraft: 0
 --- !u!1 &5834898836146275169
 GameObject:
   m_ObjectHideFlags: 0
