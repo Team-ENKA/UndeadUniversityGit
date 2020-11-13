@@ -14,9 +14,12 @@ public class Shooting : MonoBehaviour
     public NERFcounter nERFCounterScript;
     public GameObject hitPointParticle;
     public GameObject nERFHitPointParticle;
+    public GameObject Rocket;
     public Transform lunchLassSprite;
     public GameObject Bo;
     public Transform BoTransform;
+    public Transform BoSpriteTransform;
+    public Transform fireworksLaunchPoint;
     public float shootingCooldown;
     public float grenadeCooldown;
     public int layerMask = 1 << 13;
@@ -48,8 +51,13 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1) && grenadeCooldown <= 0f)
         {
             nERFCounterScript.AmmoCheck();
-            //grenadeCooldown = 2f;
-            //Instantiate(nERFHitPointParticle, capsuleTransform.position, lunchLassSprite.rotation);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+
+            FireWorks();
+
         }
     }
 
@@ -92,6 +100,14 @@ public class Shooting : MonoBehaviour
         }
 
     }
+
+    public void FireWorks()
+    {
+
+        Instantiate(Rocket, fireworksLaunchPoint.position, BoSpriteTransform.rotation);
+
+    }
+
     public void NERFShoot()
     {
         RaycastHit2D hit = Physics2D.Linecast(BoTransform.position, shootingDirection.position, layerMask);
