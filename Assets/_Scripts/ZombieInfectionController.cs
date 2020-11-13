@@ -18,6 +18,8 @@ public class ZombieInfectionController : MonoBehaviour
     public GameObject Zombie_sprite;
     public AIDestinationSetter switchTargetDestination;
 
+    public bool antibacResistant;
+
     public void GotGrenaded()
     {
 
@@ -28,9 +30,11 @@ public class ZombieInfectionController : MonoBehaviour
 
     public void GotShot()
     {
-
-        TakeDamage(4);
-        Debug.Log("Shot");
+        if (antibacResistant == false)
+        {
+            TakeDamage(4);
+            Debug.Log("Shot");
+        }
 
     }
 

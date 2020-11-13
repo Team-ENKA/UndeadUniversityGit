@@ -11,11 +11,12 @@ public class PlayerDetection : MonoBehaviour
     public GameObject player;
     public AIDestinationSetter Destination;
     int layerMask = 1 << 9;
+    int layerMask2 = 1 << 2;
 
     private void Start()
     {
 
-        layerMask = ~layerMask;
+        layerMask = ~(layerMask | layerMask2);
         player = GameObject.FindGameObjectWithTag("Player");
         playerPos = player.GetComponent<Transform>();
         zombieScanTransform = transform;

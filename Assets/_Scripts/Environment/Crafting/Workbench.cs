@@ -57,17 +57,17 @@ public class Workbench : MonoBehaviour
         {
             craftScreen.SetActive(true);
             insuffMats.gameObject.SetActive(false);
-            sledgeActive++;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                sledgeActive++;
+                antibacSledge.sledgeCraft = true;
+                craftScreen.SetActive(false);
+                pressSpace.SetActive(true);
+                spaceActive = 5;
+                Debug.Log("CraftClick done");
+            }
             Debug.Log("CraftScreen active");
         }
-    }
-    public void CraftClick()
-    {
-        antibacSledge.sledgeCraft=true;
-        craftScreen.SetActive(false);
-        pressSpace.SetActive(true);
-        spaceActive = 5;
-        Debug.Log("CraftClick done");
     }
     private void Update()
     {

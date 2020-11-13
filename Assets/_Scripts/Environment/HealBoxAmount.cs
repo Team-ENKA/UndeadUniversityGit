@@ -8,13 +8,12 @@ public class HealBoxAmount : MonoBehaviour
     public int healBoxes = 0;
     public Text Text;
     public HealPickup heal;
+
     public BoHealthController health;
     public BoHealthBar healthBar;
 
     void Start()
     {
-
-
         //Gets the text component
         Text = GetComponent<Text>();
 
@@ -22,8 +21,7 @@ public class HealBoxAmount : MonoBehaviour
 
     public void Heal()
     {
-        health.currentHealth += 30;
-        healthBar.SetHealth(health.currentHealth);
+        health.Heal(30);
     }
 
     void Update()
@@ -34,13 +32,13 @@ public class HealBoxAmount : MonoBehaviour
 
 
         //When the player has a healbox, less than 30 health and presses H or G; restore health
-        if (healBoxes != 0 && health.currentHealth < 30 && Input.GetKeyDown(KeyCode.H) || Input.GetKeyDown(KeyCode.J))
+        /*if (healBoxes > 0 && Input.GetKeyDown(KeyCode.H))
         {
 
             Heal();
             healBoxes -= 1;
 
-        }
+        }*/
 
     }
 

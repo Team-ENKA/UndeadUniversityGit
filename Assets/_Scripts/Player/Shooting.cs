@@ -6,9 +6,7 @@ using UnityEngine.EventSystems;
 public class Shooting : MonoBehaviour
 {
 
-    public Transform capsuleTransform;
     public Transform shootingDirection;
-    public Vector2 shotOrigin;
     public EnemyHealthController enemyHealth;
     public ZombieInfectionController zombieInfection;
     public ZombieDamageController zombieDamage;
@@ -22,11 +20,12 @@ public class Shooting : MonoBehaviour
     public float shootingCooldown;
     public float grenadeCooldown;
     public int layerMask = 1 << 13;
+    public int layerMask2 = 1 << 2;
 
     private void Start()
     {
 
-        layerMask = ~layerMask;
+        layerMask = ~(layerMask | layerMask2);
         Bo = GameObject.FindGameObjectWithTag("Player");
         BoTransform = Bo.GetComponent<Transform>();
 
@@ -59,7 +58,7 @@ public class Shooting : MonoBehaviour
 
         //Creates a new Vector2 using the the first components x and y transforms
         RaycastHit2D hit = Physics2D.Linecast(BoTransform.position, shootingDirection.position, layerMask);
-        Debug.DrawLine(shotOrigin, shootingDirection.position, Color.green, 20f);
+        Debug.DrawLine(BoTransform.position, shootingDirection.position, Color.green, 20f);
 
         //If the collider hits anything, it will check if it's a target. The collider hit belongs 
         //to an object tagged as target, it will use the EnemyHealthController to lower the targets health
@@ -95,9 +94,8 @@ public class Shooting : MonoBehaviour
     }
     public void NERFShoot()
     {
-        shotOrigin = new Vector2(capsuleTransform.position.x, capsuleTransform.position.y);
-        RaycastHit2D hit = Physics2D.Linecast(shotOrigin, shootingDirection.position, layerMask);
-        Debug.DrawLine(shotOrigin, hit.point, Color.red, 20f);
+        RaycastHit2D hit = Physics2D.Linecast(BoTransform.position, shootingDirection.position, layerMask);
+        Debug.DrawLine(BoTransform.position, shootingDirection.position, Color.green, 20f);
 
         if (hit.collider != null)
         {
@@ -118,8 +116,8 @@ public class Shooting : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
 
-                    zombieDamage = hit.collider.gameObject.GetComponentInChildren<ZombieDamageController>();
-                    zombieDamage.GotShot();
+                    zombieInfection = hit.collider.gameObject.GetComponentInChildren<ZombieInfectionController>();
+                    zombieInfection.GotGrenaded();
 
                 }
 

@@ -24,12 +24,7 @@ public class HealPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && health.currentHealth < 30)
-        {
-            healBoxAmount.Heal();
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.tag == "Player" && health.currentHealth == 30)
+        if (collision.gameObject.tag == "Player")
         {
             healBoxAmount.AddHealBox();
             Destroy(gameObject);

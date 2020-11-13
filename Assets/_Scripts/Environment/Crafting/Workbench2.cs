@@ -58,7 +58,15 @@ public class Workbench2 : MonoBehaviour
         {
             craftScreen.SetActive(true);
             insuffMats.gameObject.SetActive(false);
-            fireWorksActive++;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                fireWorksActive++;
+                //fireworks.fireworksCraft = true;
+                craftScreen.SetActive(false);
+                pressSpace.SetActive(true);
+                spaceActive = 5;
+                Debug.Log("CraftClick done");
+            }
             Debug.Log("CraftScreen active");
         }
     }

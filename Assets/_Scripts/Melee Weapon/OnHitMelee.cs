@@ -6,7 +6,7 @@ using UnityEngine;
 public class OnHitMelee : MonoBehaviour
 {
 
-    public ZombieDamageController die;
+    public ZombieInfectionController die;
     public GameObject deathParticle;
     public int deathEffectParticles;
     
@@ -14,8 +14,8 @@ public class OnHitMelee : MonoBehaviour
     {
         for (int i = 0; i < deathEffectParticles; i++)
             Instantiate(deathParticle, transform.position, Quaternion.identity);
-        die = collision.GetComponentInChildren<ZombieDamageController>();
-        die.GotShot();
+        die = collision.GetComponentInChildren<ZombieInfectionController>();
+        die.GotGrenaded();
     }
 
 }
