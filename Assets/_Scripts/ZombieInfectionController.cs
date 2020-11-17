@@ -13,6 +13,7 @@ public class ZombieInfectionController : MonoBehaviour
 
     public ZombieDamageBar ZombieDamageBar;
     public GameObject deathParticle;
+    public GameObject HeartSprite;
     public GameObject Zombie_AI;
     public GameObject Infectionbar;
     public GameObject Zombie_sprite;
@@ -64,6 +65,7 @@ public class ZombieInfectionController : MonoBehaviour
         switchTargetDestination.ChangeTarget();
         for (int i = 0; i < deathEffectParticles; i++)
             Instantiate(deathParticle, transform.position, Quaternion.identity);
+        Instantiate(HeartSprite, transform.position, Quaternion.identity);
         Destroy(Zombie_sprite);
         
     }   

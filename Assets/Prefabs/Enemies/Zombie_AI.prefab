@@ -536,10 +536,12 @@ MonoBehaviour:
   deathEffectParticles: 30
   ZombieDamageBar: {fileID: 1942703946436258159}
   deathParticle: {fileID: 8510087422334560741, guid: f044ef37a6ec40d4b9b646036a7087e6, type: 3}
+  HeartSprite: {fileID: 5406519774694272168, guid: 41e82124806594046ab1a74fa17db703, type: 3}
   Zombie_AI: {fileID: 6949561496242566077}
   Infectionbar: {fileID: 3122863809213870804}
   Zombie_sprite: {fileID: 7342537277073457753}
   switchTargetDestination: {fileID: 6656645549332155010}
+  antibacResistant: 0
 --- !u!114 &5879114361966937585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,7 +937,7 @@ MonoBehaviour:
   - {x: -0.711037, y: 1.0724157, z: 0}
   m_ShapePathHash: -1373746713
   m_Mesh: {fileID: 0}
-  m_InstanceId: 149056
+  m_InstanceId: 76480
 --- !u!1 &7489742597444930800
 GameObject:
   m_ObjectHideFlags: 0

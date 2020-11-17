@@ -10,9 +10,8 @@ public class Shooting : MonoBehaviour
     public EnemyHealthController enemyHealth;
     public ZombieInfectionController zombieInfection;
     public ZombieDamageController zombieDamage;
-    public AmmoCounter ammoCounterScript;
-    public NERFcounter nERFCounterScript;
     public GameObject hitPointParticle;
+    public GameObject shootingParticle;
     public GameObject nERFHitPointParticle;
     public GameObject Rocket;
     public Transform lunchLassSprite;
@@ -22,6 +21,8 @@ public class Shooting : MonoBehaviour
     public Transform fireworksLaunchPoint;
     public float shootingCooldown;
     public float grenadeCooldown;
+    public float fireRate;
+    public float grenadeRate;
     public int layerMask = 1 << 13;
     public int layerMask2 = 1 << 2;
 
@@ -41,22 +42,27 @@ public class Shooting : MonoBehaviour
         shootingCooldown = shootingCooldown - Time.deltaTime;
         grenadeCooldown = grenadeCooldown - Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && shootingCooldown <= 0f)
+        if (Input.GetKey(KeyCode.Mouse0) && shootingCooldown <= 0f)
         {
 
-            ammoCounterScript.AmmoCheck();
+            Shoot();
+            shootingCooldown = fireRate;
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse1) && grenadeCooldown <= 0f)
+        if (Input.GetKey(KeyCode.Mouse1) && shootingCooldown <= 0f)
         {
-            nERFCounterScript.AmmoCheck();
+
+            NERFShoot();
+            shootingCooldown = fireRate;
+
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKey(KeyCode.F) && grenadeCooldown <= 0f)
         {
 
             FireWorks();
+            grenadeCooldown = grenadeRate;
 
         }
     }
@@ -67,6 +73,15 @@ public class Shooting : MonoBehaviour
         //Creates a new Vector2 using the the first components x and y transforms
         RaycastHit2D hit = Physics2D.Linecast(BoTransform.position, shootingDirection.position, layerMask);
         Debug.DrawLine(BoTransform.position, shootingDirection.position, Color.green, 20f);
+
+        float shootingParticles = Random.Range(2, 4);
+
+        for (int i = 0; i < shootingParticles; i++)
+        {
+
+            Instantiate(shootingParticle, fireworksLaunchPoint.position, Quaternion.identity);
+
+        }
 
         //If the collider hits anything, it will check if it's a target. The collider hit belongs 
         //to an object tagged as target, it will use the EnemyHealthController to lower the targets health
@@ -117,14 +132,7 @@ public class Shooting : MonoBehaviour
         {
             Vector3 hitPoint = new Vector3(hit.point.x, hit.point.y, 0f);
 
-            float nERFhitPointParticles = Random.Range(2, 6);
-
-            for (int i = 0; i < nERFhitPointParticles; i++)
-            {
-
-                Instantiate(nERFHitPointParticle, hitPoint, Quaternion.identity);
-
-            }
+            Instantiate(nERFHitPointParticle, hitPoint, Quaternion.identity);
 
             if (hit.collider.tag == "Enemy")
             {

@@ -13,6 +13,9 @@ TagManager:
   - Coffee
   - curedZDestination
   - Canvas
+  - DestroyOnRespawn
+  - ShootingDir
+  - EventController
   layers:
   - Default
   - TransparentFX
