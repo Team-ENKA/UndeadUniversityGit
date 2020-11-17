@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
 {
+
+    public GameObject mainCam;
+    public GameObject volumeSlider;
+    public Slider volumeSliderValue;
+    public AudioSource mainCamAudio;
 
     //Quits the game when the quit game button is pressed
     public void Quit()
@@ -36,6 +42,16 @@ public class SceneController : MonoBehaviour
     {
 
         SceneManager.LoadScene(0);
+
+    }
+
+    public void Audio()
+    {
+
+        mainCam = GameObject.FindGameObjectWithTag("MainCamera");
+        mainCamAudio = mainCam.GetComponent<AudioSource>();
+        volumeSliderValue = volumeSlider.GetComponent<Slider>();
+        mainCamAudio.volume = volumeSliderValue.value;
 
     }
 
