@@ -9,6 +9,8 @@ public class BoHealthController : MonoBehaviour
     public int currentHealth;
     public BoHealthBar healthBar;
 
+    public GameObject pause;
+
     public GameObject LunchLass;
     public float playerInvincibility;
 
@@ -67,6 +69,7 @@ public class BoHealthController : MonoBehaviour
         {
             for (int i = 0; i < deathEffectParticles; i++)
                 Instantiate(deathParticle, transform.position, Quaternion.identity);
+            pause.active = true;
             Destroy(LunchLass);
         }
     }
