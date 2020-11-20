@@ -8,7 +8,7 @@ public class ShowHHeal : MonoBehaviour
 
     public BoHealthController health;
     public Text HtoHealText;
-    private void Update()
+    /*private void Update()
     {
         if(health.currentHealth < 15)
         {
@@ -18,5 +18,5 @@ public class ShowHHeal : MonoBehaviour
         {
             HtoHealText.SetActive(false);
         }
-    }
+    }*/
 }
