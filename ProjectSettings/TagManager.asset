@@ -16,6 +16,7 @@ TagManager:
   - DestroyOnRespawn
   - ShootingDir
   - EventController
+  - PlayerSFX
   layers:
   - Default
   - TransparentFX

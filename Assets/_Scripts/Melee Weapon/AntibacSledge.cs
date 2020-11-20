@@ -9,6 +9,16 @@ public class AntibacSledge : MonoBehaviour
     private GameObject meleeATK;
     public float meleeATKCooldown;
     public bool sledgeCraft;
+    public GameObject pS;
+    public PlaySound playSound;
+
+    private void Start()
+    {
+
+        pS = GameObject.FindGameObjectWithTag("PlayerSFX");
+        playSound = pS.GetComponent<PlaySound>();
+
+    }
 
     // Update is called once per frame
     public void Update()
@@ -23,6 +33,7 @@ public class AntibacSledge : MonoBehaviour
             meleeATK = Instantiate(attack, transform.position, transform.rotation);
             meleeATKCooldown = 0.18f;
             Destroy(meleeATK, 0.18f);
+            playSound.AntibacSledgeSwing();
 
         }
 
