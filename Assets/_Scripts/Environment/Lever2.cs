@@ -13,6 +13,8 @@ public class Lever2 : MonoBehaviour
     public string have;
     public string need;
     public TextMeshPro counterVsReq;
+    public SpriteRenderer upSprite;
+    public SpriteRenderer downSprite;
 
     private GameObject cureCounter;
     private CureCounter cureCounterScript;
@@ -24,6 +26,7 @@ public class Lever2 : MonoBehaviour
         cureCounter = GameObject.FindGameObjectWithTag("CureCounter");
         cureCounterScript = cureCounter.GetComponent<CureCounter>();
         requirementCanvas.SetActive(false);
+        downSprite.enabled = false;
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -39,6 +42,8 @@ public class Lever2 : MonoBehaviour
                 cd++;                                                               //Increase cooldown so door opens only once
                 float rotateDoorTo = doorTransform.rotation.eulerAngles.z + 90f;    //Rotation amount (90 degrees)
                 doorTransform.rotation = Quaternion.Euler(0, 0, rotateDoorTo);      //Rotate door along z axis
+                downSprite.enabled = true;                                          //Flips the switch downwards
+                upSprite.enabled = false;                                           //Disable current sprite
             }
         }
     }
