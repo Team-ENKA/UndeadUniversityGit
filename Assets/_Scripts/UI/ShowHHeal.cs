@@ -2,21 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ShowHHeal : MonoBehaviour
 {
 
-    public BoHealthController health;
-    public Text HtoHealText;
-    /*private void Update()
+    private GameObject player;
+    private BoHealthController health;
+    public GameObject HtoHealText;
+    private void Start()
     {
-        if(health.currentHealth < 15)
-        {
-            HtoHealText.;
-        }
+        player = GameObject.FindGameObjectWithTag("Player");
+        health = player.GetComponent<BoHealthController>();
+    }
+    private void Update()
+    {
         if(health.currentHealth > 15)
         {
             HtoHealText.SetActive(false);
         }
-    }*/
+        if(health.currentHealth < 15)
+        {
+            HtoHealText.SetActive(true);
+        }
+    }
 }
