@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CureCounter : MonoBehaviour
 {
-    [SerializeField] private int counter;
+    public int counter;
 
     public void CounterIncrease()
     {
         counter++;
-        Debug.Log(counter);
+        Debug.Log("Counter is at: " + counter);
     }
 }
