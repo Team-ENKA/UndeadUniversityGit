@@ -50,7 +50,6 @@ public class Lever2 : MonoBehaviour
     private void NotEnough()
     {
         counter = 3;
-        counter -= Time.deltaTime;
         requirementCanvas.SetActive(true);
         need = requiredCures.ToString();                        //need = predefined requirement, here 18
         have = cureCounterScript.counter.ToString();            //have = current amount of cures
@@ -58,13 +57,13 @@ public class Lever2 : MonoBehaviour
    
         Debug.Log("Cure more zombies, the door is locked");
         /*
-         * Change sprite from Up to Down
-         * show image Gingerbreadman
          * Play sound Gadunk
         */
+    }
+    private void Update()
+    {
+        counter -= Time.deltaTime;
         if (counter <= 0)
-        {
-            requirementCanvas.SetActive(false);
-        }
+        requirementCanvas.SetActive(false);
     }
 }
