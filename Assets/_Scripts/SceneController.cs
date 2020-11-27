@@ -41,6 +41,19 @@ public class SceneController : MonoBehaviour
     public void MainMenu()
     {
 
+        int sceneNum = SceneManager.GetActiveScene().buildIndex;
+
+        if (sceneNum == 1)
+        {
+
+            Destroy(GameObject.FindGameObjectWithTag("Canvas"));
+            Destroy(GameObject.FindGameObjectWithTag("Player"));
+            Destroy(GameObject.FindGameObjectWithTag("MainCamera"));
+            Destroy(GameObject.FindGameObjectWithTag("ShootingDir"));
+            Destroy(GameObject.FindGameObjectWithTag("EventController"));
+
+        }
+
         SceneManager.LoadScene(0);
 
     }
