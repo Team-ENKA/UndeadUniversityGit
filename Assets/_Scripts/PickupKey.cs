@@ -21,7 +21,7 @@ public class PickupKey : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
 
-        if (Input.GetKey("e") && collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
 
             Keys.AddKey();

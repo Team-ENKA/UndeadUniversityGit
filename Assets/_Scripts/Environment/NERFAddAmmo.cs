@@ -18,7 +18,7 @@ public class NERFAddAmmo : MonoBehaviour
     void OnTriggerStay2D(Collider2D collision)
     {
 
-        if (Input.GetKey("e") && collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
 
             Destroy(gameObject);

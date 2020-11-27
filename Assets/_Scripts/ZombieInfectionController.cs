@@ -18,13 +18,15 @@ public class ZombieInfectionController : MonoBehaviour
     public GameObject Infectionbar;
     public GameObject Zombie_sprite;
     public AIDestinationSetter switchTargetDestination;
+    private GameObject cureCounter;
+    private CureCounter cureCounterScript;
 
     public bool antibacResistant;
 
     public void GotGrenaded()
     {
 
-        TakeDamage(16);
+        TakeDamage(10);
         Debug.Log("Grenaded");
 
     }
@@ -41,7 +43,8 @@ public class ZombieInfectionController : MonoBehaviour
 
     void Start()
     {
-
+        cureCounter = GameObject.FindGameObjectWithTag("CureCounter");
+        cureCounterScript = cureCounter.GetComponent<CureCounter>();
         currentHealth = maxHealth;
         ZombieDamageBar.SetMaxHealth(maxHealth);
 
@@ -67,6 +70,6 @@ public class ZombieInfectionController : MonoBehaviour
             Instantiate(deathParticle, transform.position, Quaternion.identity);
         Instantiate(HeartSprite, transform.position, Quaternion.identity);
         Destroy(Zombie_sprite);
-        
+        cureCounterScript.CounterIncrease();
     }   
 }

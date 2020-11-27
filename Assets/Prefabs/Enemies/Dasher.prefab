@@ -394,7 +394,7 @@ MonoBehaviour:
   Infectionbar: {fileID: 397931843345403250}
   Zombie_sprite: {fileID: 5419789895381155327}
   switchTargetDestination: {fileID: 6656645549332155010, guid: a458ef95453fda34f9d8b3b45d293422, type: 3}
-  antibacResistant: 0
+  antibacResistant: 1
 --- !u!114 &9170973352286304855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,7 +778,7 @@ MonoBehaviour:
   - {x: -0.711037, y: 1.0724157, z: 0}
   m_ShapePathHash: -1373746713
   m_Mesh: {fileID: 0}
-  m_InstanceId: 22034
+  m_InstanceId: 214966
 --- !u!1 &5666326223432961051
 GameObject:
   m_ObjectHideFlags: 0

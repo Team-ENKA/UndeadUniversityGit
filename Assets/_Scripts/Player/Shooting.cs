@@ -19,6 +19,7 @@ public class Shooting : MonoBehaviour
     public Transform BoTransform;
     public Transform BoSpriteTransform;
     public Transform fireworksLaunchPoint;
+    public NERFcounter NERFcounter;
     public float shootingCooldown;
     public float grenadeCooldown;
     public float fireRate;
@@ -53,7 +54,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse1) && shootingCooldown <= 0f)
         {
 
-            NERFShoot();
+            NERFcounter.AmmoCheck();
             shootingCooldown = fireRate;
 
         }
