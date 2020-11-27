@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnOnTimer : MonoBehaviour
 {
     [SerializeField] GameObject zombieAi;
-    public float timer = 0;
+    public float timerKeeper = 0;
     [SerializeField] Transform pos1;
     [SerializeField] Transform pos2;
     [SerializeField] Transform pos3;
@@ -16,39 +17,42 @@ public class SpawnOnTimer : MonoBehaviour
     [SerializeField] Transform pos8;
     [SerializeField] Transform pos9;
     [SerializeField] Transform pos10;
+    bool spawned;
 
     void Update()
     {
-        timer += Time.deltaTime;
-        if (0 < timer && timer > 1) 
+        
+        timerKeeper += Time.deltaTime;
+        int timer = Convert.ToInt32(timerKeeper);
+        if (timer==1) 
         {
             Instantiate(zombieAi, pos1);
         }
-        if (0 < timer && timer > 1)
+        if (timer==2)
         {
             Instantiate(zombieAi, pos2);
         }
-        if (0 < timer && timer > 1)
+        if (timer==3)
         {
             Instantiate(zombieAi, pos3);
         }
-        if (0 < timer && timer > 1)
+        if (timer==4)
         {
             Instantiate(zombieAi, pos4);
         }
-        if (0 < timer && timer > 1)
+        if (timer==5)
         {
             Instantiate(zombieAi, pos5);
         }
-        if (0 < timer && timer > 1)
+        if (timer==6)
         {
             Instantiate(zombieAi, pos6);
         }
-        if (0 < timer && timer > 1)
+        if (timer==7)
         {
             Instantiate(zombieAi, pos7);
         }
-        if (0 < timer && timer > 1)
+        if (timer==8)
         {
             Instantiate(zombieAi, pos8);
         }
