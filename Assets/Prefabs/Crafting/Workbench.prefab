@@ -786,6 +786,7 @@ GameObject:
   - component: {fileID: 7472019430835516994}
   - component: {fileID: 7472019430835516995}
   - component: {fileID: 898074832}
+  - component: {fileID: 143764930269852561}
   m_Layer: 2
   m_Name: Workbench
   m_TagString: Untagged
@@ -910,3 +911,24 @@ MonoBehaviour:
   poleBool: {fileID: 0}
   tankBool: {fileID: 0}
   antibacSledge: {fileID: 0}
+--- !u!50 &143764930269852561
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7472019430835516992}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+  m_Constraints: 0
