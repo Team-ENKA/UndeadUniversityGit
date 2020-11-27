@@ -24,7 +24,7 @@ public class ZombieInfectionController : MonoBehaviour
     public void GotGrenaded()
     {
 
-        TakeDamage(16);
+        TakeDamage(10);
         Debug.Log("Grenaded");
 
     }
