@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Lever2 : MonoBehaviour
 {
 
     public Transform doorTransform;
+    public int requiredCures = 18;
+    public Canvas requirement;
+    public string have;
+    public string need;
+    public TextMeshPro counterVsReq;
 
     private GameObject cureCounter;
     private CureCounter cureCounterScript;
@@ -20,11 +27,24 @@ public class Lever2 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && cd == 0)
         {
-            if (cureCounterScript.counter < 18)
+            if (cureCounterScript.counter < requiredCures)
             {
+                need = requiredCures.ToString();                        //need = predefined requirement, here 18
+                have = cureCounterScript.counter.ToString();            //have = current amount of cures
+                counterVsReq.text = have + " / " + need;                //have cured / need cured
                 Debug.Log("Cure more zombies, the door is locked");
+                /*
+                 * counter = 3
+                 * counter -= Time.Deltatime
+                 * Change sprite from Up to Down
+                 * show image Gingerbreadman
+                 * show text, which displays zombies cured VS required
+                 * Play sound Gadunk
+                 * if (counter <= 0)
+                 * disable 
+                */
             }
-            if (cureCounterScript.counter >= 18)
+            if (cureCounterScript.counter >= requiredCures)
             {
                 Debug.Log("Lever Pull");
                 cd++;                                                               //Increase cooldown so door opens only once
