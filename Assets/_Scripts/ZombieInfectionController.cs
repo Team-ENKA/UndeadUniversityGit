@@ -43,11 +43,10 @@ public class ZombieInfectionController : MonoBehaviour
 
     void Start()
     {
-        cureCounter = GameObject.FindGameObjectWithTag("CureCounter");
-        cureCounterScript = cureCounter.GetComponent<CureCounter>();
         currentHealth = maxHealth;
         ZombieDamageBar.SetMaxHealth(maxHealth);
-
+        cureCounter = GameObject.FindGameObjectWithTag("CureCounter");
+        cureCounterScript = cureCounter.GetComponent<CureCounter>();
     }
 
     void TakeDamage(int damage)
