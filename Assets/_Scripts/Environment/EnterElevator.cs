@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EnterElevator : MonoBehaviour
-{   
+{
     public Transform playerTransform;
     public GameObject LunchLass;
 

@@ -35,7 +35,7 @@ public class ZombieInfectionController : MonoBehaviour
     {
         if (antibacResistant == false)
         {
-            TakeDamage(5);
+            TakeDamage(4);
             Debug.Log("Shot");
         }
 
