@@ -19,7 +19,7 @@ public class UIController : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown("escape"))
+        if (Input.GetKeyDown(KeyCode.Escape))
             if (pauseMenu == 1)
             {
 
@@ -34,6 +34,16 @@ public class UIController : MonoBehaviour
                 inGameMenu.SetActive(true);
                 inGameUI.SetActive(false);
                 pauseMenu = 1;
+
+            }
+
+        if (pauseMenu == 1)
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W))
+            {
+
+                inGameMenu.SetActive(false);
+                inGameUI.SetActive(true);
+                pauseMenu = 0;
 
             }
 

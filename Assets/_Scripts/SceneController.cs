@@ -5,9 +5,8 @@ using UnityEngine.UI;
 public class SceneController : MonoBehaviour
 {
 
-    public GameObject mainCam;
     public GameObject volumeSlider;
-    public Slider volumeSliderValue;
+    public float volumeSliderValue;
     public AudioSource mainCamAudio;
 
     //Quits the game when the quit game button is pressed
@@ -43,28 +42,29 @@ public class SceneController : MonoBehaviour
 
         int sceneNum = SceneManager.GetActiveScene().buildIndex;
 
-        if (sceneNum == 1)
-        {
-
             Destroy(GameObject.FindGameObjectWithTag("Canvas"));
             Destroy(GameObject.FindGameObjectWithTag("Player"));
             Destroy(GameObject.FindGameObjectWithTag("MainCamera"));
             Destroy(GameObject.FindGameObjectWithTag("ShootingDir"));
             Destroy(GameObject.FindGameObjectWithTag("EventController"));
 
-        }
-
         SceneManager.LoadScene(0);
 
     }
 
-    public void Audio()
+    private void Update()
     {
 
-        mainCam = GameObject.FindGameObjectWithTag("MainCamera");
-        mainCamAudio = mainCam.GetComponent<AudioSource>();
-        volumeSliderValue = volumeSlider.GetComponent<Slider>();
-        mainCamAudio.volume = volumeSliderValue.value;
+        GameObject[] AudioSourcesInScene = GameObject.FindGameObjectsWithTag("Enemy");
+        mainCamAudio = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
+        volumeSliderValue = volumeSlider.GetComponent<Slider>().value;
+
+        foreach (GameObject element in AudioSourcesInScene)
+        {
+            element.GetComponent<AudioSource>().volume = volumeSliderValue;
+        }
+
+        mainCamAudio.volume = volumeSliderValue;
 
     }
 

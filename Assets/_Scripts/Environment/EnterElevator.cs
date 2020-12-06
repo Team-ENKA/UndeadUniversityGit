@@ -25,8 +25,8 @@ public class EnterElevator : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
 
-            playerTransform.position = Vector2.zero;
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+            LunchLass.GetComponent<Movement>().enabled = false;
 
         }   
 
@@ -36,9 +36,11 @@ public class EnterElevator : MonoBehaviour
     {
 
         transition.SetTrigger("Start");
-
+   
         yield return new WaitForSeconds(transitionTime);
 
+        playerTransform.position = Vector2.zero;
+        LunchLass.GetComponent<Movement>().enabled = true;
         SceneManager.LoadScene(levelndex);
 
     }
