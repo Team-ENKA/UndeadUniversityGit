@@ -17,9 +17,29 @@ public class SpawnOnTimer : MonoBehaviour
     [SerializeField] Transform pos8;
     [SerializeField] Transform pos9;
     [SerializeField] Transform pos10;
-    bool spawned;
+    List<Transform> spawnPos = new List<Transform>();
 
-    void Update()
+    private void Start()
+    {
+        spawnPos.AddRange(new Transform[] { pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, pos10 });
+        Debug.Log(spawnPos.Count);
+    }
+    private void forSpawn()
+    {
+        for (int i = 0; i < 11; i++)
+        {
+            Debug.Log("Ping");
+            Instantiate(zombieAi, spawnPos[i+1]);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            forSpawn();
+        }
+    }
+    /*void Update()
     {
         
         timerKeeper += Time.deltaTime;
@@ -64,5 +84,5 @@ public class SpawnOnTimer : MonoBehaviour
         {
             Instantiate(zombieAi, pos10);
         }
-    }
+    }*/
 }
