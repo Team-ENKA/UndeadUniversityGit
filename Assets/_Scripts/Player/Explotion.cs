@@ -9,7 +9,7 @@ public class Explotion : MonoBehaviour
     public GameObject explosionPS;
     public Transform t;
     CircleCollider2D circleCol;
-    new List<GameObject> zombies;
+    public new List<GameObject> zombies;
 
     private void Start()
     {
@@ -27,7 +27,8 @@ public class Explotion : MonoBehaviour
         foreach(GameObject Element in zombies)
         {
 
-            Element.AddComponent<StunZombie>().Stunned(4);
+            if(!Element.GetComponent<StunZombie>())
+                Element.AddComponent<StunZombie>().Stunned(8);
 
         }
 
@@ -36,17 +37,16 @@ public class Explotion : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if(collision.gameObject.tag != "Player")
-        {
-
-            GameObject explosionParticleSystem = Instantiate(explosionPS, transform.position, Quaternion.identity);
-            Destroy(explosionParticleSystem, 6);
-            Destroy(gameObject);
-            circleCol = gameObject.AddComponent<CircleCollider2D>();
-            circleCol.isTrigger = true;
-            circleCol.radius = 10;
-
-        }
+        GameObject explosionParticleSystem = Instantiate(explosionPS, transform.position, Quaternion.identity);
+        Destroy(explosionParticleSystem, 6);
+        RB.isKinematic = true;
+        RB.velocity = Vector2.zero;
+        Destroy(gameObject.GetComponent<SpriteRenderer>());
+        Destroy(gameObject, 1);
+        circleCol = gameObject.AddComponent<CircleCollider2D>();
+        circleCol.isTrigger = true;
+        circleCol.radius = 20;
+        circleCol.offset = Vector2.zero;
 
     }
 
@@ -57,13 +57,6 @@ public class Explotion : MonoBehaviour
         {
 
             zombies.Add(collision.gameObject);
-
-        }
-
-        if (zombies.Count >= 5)
-        {
-
-            Destroy(circleCol);
 
         }
 
