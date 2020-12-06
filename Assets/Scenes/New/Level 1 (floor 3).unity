@@ -11197,9 +11197,29 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1065811038}
+    - target: {fileID: 1552988254764923319, guid: a64c15de722fea24a9bce22aed7b81e1, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552988254764923319, guid: a64c15de722fea24a9bce22aed7b81e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521511521824263750, guid: a64c15de722fea24a9bce22aed7b81e1, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521511521824263750, guid: a64c15de722fea24a9bce22aed7b81e1, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521511521824263750, guid: a64c15de722fea24a9bce22aed7b81e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3888102246559577478, guid: a64c15de722fea24a9bce22aed7b81e1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4587284658643223450, guid: a64c15de722fea24a9bce22aed7b81e1, type: 3}
       propertyPath: NERFhasAmmo
