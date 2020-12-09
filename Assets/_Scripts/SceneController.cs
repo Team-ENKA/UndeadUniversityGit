@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class SceneController : MonoBehaviour
 {
 
     public GameObject volumeSlider;
-    public float volumeSliderValue;
+    [SerializeField]
+    private float volumeSliderValue;
     public AudioSource mainCamAudio;
     private GameObject player;
+    public new List<GameObject> AudioSourcesInScene;
 
     //Quits the game when the quit game button is pressed
     public void Quit()
@@ -74,14 +77,16 @@ public class SceneController : MonoBehaviour
     private void Update()
     {
 
-        GameObject[] AudioSourcesInScene = GameObject.FindGameObjectsWithTag("Enemy");
-
-        foreach (GameObject element in AudioSourcesInScene)
+        foreach (GameObject Element in AudioSourcesInScene)
         {
-            element.GetComponent<AudioSource>().volume = volumeSliderValue;
+
+            Element.GetComponent<AudioSource>().volume = volumeSliderValue;
+
         }
 
         mainCamAudio.volume = volumeSliderValue;
+
+        AudioSourcesInScene.Add(GameObject.FindGameObjectWithTag("Enemy"));
 
     }
 
