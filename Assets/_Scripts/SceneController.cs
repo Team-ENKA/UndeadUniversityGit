@@ -52,12 +52,24 @@ public class SceneController : MonoBehaviour
 
     }
 
+    public void VolumeChange()
+    {
+
+        volumeSliderValue = volumeSlider.GetComponent<Slider>().value;
+
+    }
+
+    private void Start()
+    {
+
+        mainCamAudio = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
+
+    }
+
     private void Update()
     {
 
         GameObject[] AudioSourcesInScene = GameObject.FindGameObjectsWithTag("Enemy");
-        mainCamAudio = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
-        volumeSliderValue = volumeSlider.GetComponent<Slider>().value;
 
         foreach (GameObject element in AudioSourcesInScene)
         {
