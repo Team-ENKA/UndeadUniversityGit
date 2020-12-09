@@ -8,6 +8,7 @@ public class SceneController : MonoBehaviour
     public GameObject volumeSlider;
     public float volumeSliderValue;
     public AudioSource mainCamAudio;
+    private GameObject player;
 
     //Quits the game when the quit game button is pressed
     public void Quit()
@@ -32,6 +33,10 @@ public class SceneController : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("EventController"));
 
         }
+
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        player.GetComponent<Transform>().position = GameObject.FindGameObjectWithTag("RespawnPos").transform.position;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 

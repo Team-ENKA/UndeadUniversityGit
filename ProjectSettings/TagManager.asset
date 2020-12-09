@@ -18,6 +18,7 @@ TagManager:
   - EventController
   - PlayerSFX
   - CureCounter
+  - RespawnPos
   layers:
   - Default
   - TransparentFX
