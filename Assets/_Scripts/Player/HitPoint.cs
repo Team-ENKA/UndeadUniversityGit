@@ -5,10 +5,10 @@ using UnityEngine;
 public class HitPoint : MonoBehaviour
 {
 
-    public float maxTTD = 6f;
-    public float minTTD = 4f;
-    public float maxPForce = 26f;
-    public float minPForce = -25f;
+    public float maxTTD = 5f;
+    public float minTTD = 3f;
+    public float maxPForce = 3f;
+    public float minPForce = -3f;
 
     // Start is called before the first frame update
     void Start()
